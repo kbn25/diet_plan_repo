@@ -1,0 +1,17 @@
+{
+	"mcpServers": {
+        "diet_mcp_server": {
+            "command": "java",
+            "args": [
+            	"-Dspring.ai.mcp.server.stdio=true",
+            	"-Dserver.port=8090",
+                "-jar",
+                "C:/Diet_Plan_Jar/Diet_Plan_MCP_Server-0.0.1-SNAPSHOT.jar"
+            ],
+			"env" :{
+				"LOG_LEVEL" : "DEBUG"
+			}
+        }
+ }
+
+}
