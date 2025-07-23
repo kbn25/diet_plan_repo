@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plan</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 2em;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .patient-profile, .meal-plan, .meal {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .meal h3 {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5em;
+        }
+        .ingredients {
+            list-style-type: none;
+            padding: 0;
+        }
+        .ingredients li {
+            margin-bottom: 0.5em;
+        }
+        .nutritional-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1em;
+            background-color: #f9f9f9;
+            padding: 0.5em;
+            border-radius: 5px;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meal Plan</h1>
+        <div class="patient-profile">
+            <h2>Patient Profile</h2>
+            <p><strong>Age:</strong> 40</p>
+            <p><strong>Diabetes Type:</strong> Type 2</p>
+            <p><strong>BMI:</strong> 19.1</p>
+            <p><strong>Diet Preference:</strong> LCHF Vegan</p>
+            <p><strong>Allergies:</strong> Dairy</p>
+            <p><strong>Additional Restrictions:</strong> Refer to provided allowed food guidelines</p>
+        </div>
+        <div class="meal-plan">
+            <h2>Overall Nutritional Information</h2>
+            <div class="nutritional-info">
+                <span><strong>Total Calories:</strong> 1500</span>
+                <span><strong>Total Carbs:</strong> 50g</span>
+                <span><strong>Total Protein:</strong> 70g</span>
+                <span><strong>Total Fat:</strong> 110g</span>
+            </div>
+            <div id="meals-container">
+                </div>
+        </div>
+        <a href="#" id="download" class="download-btn">Download Meal Plan</a>
+    </div>
+
+    <script>
+        const data = {
+    "response": {
+  "patient_profile": {
+    "age": 40,
+    "diabetes_type": "Type 2",
+    "bmi": 19.1,
+    "diet_preference": "LCHF Vegan",
+    "allergies": ["Dairy"],
+    "additional_restrictions": "Refer to provided allowed food guidelines"
+  },
+  "meal_plan": {
+    "total_calories": 1500,
+    "total_carbs": 50,
+    "total_protein": 70,
+    "total_fat": 110,
+    "meals": [
+      {
+        "meal_name": "Breakfast (7:00 AM)",
+        "description": "Tofu Scramble with Kale and Avocado",
+        "ingredients": [
+          {
+            "item": "Tofu (firm)",
+            "quantity": "150g",
+            "notes": "Crumbled"
+          },
+          {
+            "item": "Kale",
+            "quantity": "1 cup",
+            "notes": "Chopped"
+          },
+          {
+            "item": "Avocado",
+            "quantity": "1/4 medium",
+            "notes": "Sliced"
+          },
+          {
+            "item": "Olive Oil",
+            "quantity": "1 tbsp",
+            "notes": "For cooking"
+          },
+          {
+            "item": "Turmeric",
+            "quantity": "1/4 tsp",
+            "notes": "For flavor and color"
+          },
+           {
+            "item": "Black Salt (Kala Namak)",
+            "quantity": "Pinch",
+            "notes": "For eggy flavor"
+          }
+        ],
+        "nutritional_info": {
+          "calories": 350,
+          "carbs": 10,
+          "protein": 25,
+          "fat": 25,
+          "fiber": 5
+        }
+      },
+      {
+        "meal_name": "Snack (10:00 AM)",
+        "description": "Walnuts",
+        "ingredients": [
+          {
+            "item": "Walnuts",
+            "quantity": "1/4 cup (approx. 30g)",
+            "notes": "Unsalted"
+          }
+        ],
+        "nutritional_info": {
+          "calories": 200,
+          "carbs": 5,
+          "protein": 5,
+          "fat": 20,
+          "fiber": 2
+        }
+      },
+      {
+        "meal_name": "Lunch (1:00 PM)",
+        "description": "Cabbage and Almond Stir-fry with Olive Oil",
+        "ingredients": [
+          {
+            "item": "Cabbage",
+            "quantity": "2 cups",
+            "notes": "Shredded"
+          },
+          {
+            "item": "Almonds",
+            "quantity": "1/4 cup (30g)",
+            "notes": "Sliced"
+          },
+          {
+            "item": "Olive Oil",
+            "quantity": "2 tbsp",
+            "notes": "For cooking"
+          },
+          {
+            "item": "Garlic",
+            "quantity": "1 clove",
+            "notes": "Minced"
+          },
+          {
+            "item": "Ginger",
+            "quantity": "1 tsp",
+            "notes": "Grated"
+          },
+          {
+            "item": "Soy Sauce (low sodium)",
+            "quantity": "1 tbsp",
+            "notes": "Optional, for flavor"
+          },
+          {
+            "item": "Red Pepper Flakes",
+            "quantity": "Pinch",
+            "notes": "Optional, for heat"
+          }
+        ],
+        "nutritional_info": {
+          "calories": 400,
+          "carbs": 15,
+          "protein": 10,
+          "fat": 35,
+          "fiber": 7
+        }
+      },
+      {
+        "meal_name": "Snack (4:00 PM)",
+        "description": "Cashews",
+        "ingredients": [
+          {
+            "item": "Cashews",
+            "quantity": "1/4 cup (approx. 30g)",
+            "notes": "Unsalted"
+          }
+        ],
+        "nutritional_info": {
+          "calories": 180,
+          "carbs": 10,
+          "protein": 5,
+          "fat": 15,
+          "fiber": 1
+        }
+      },
+      {
+        "meal_name": "Dinner (7:00 PM)",
+        "description": "Pumpkin and Spinach Curry with Coconut Cream",
+        "ingredients": [
+          {
+            "item": "Pumpkin",
+            "quantity": "1.5 cups",
+            "notes": "Cubed"
+          },
+          {
+            "item": "Spinach",
+            "quantity": "1 cup",
+            "notes": "Fresh"
+          },
+          {
+            "item": "Coconut Cream (full fat)",
+            "quantity": "1/4 cup",
+            "notes": "Unsweetened"
+          },
+          {
+            "item": "Onion",
+            "quantity": "1/4 medium",
+            "notes": "Chopped"
+          },
+          {
+            "item": "Ginger",
+            "quantity": "1 tsp",
+            "notes": "Grated"
+          },
+          {
+            "item": "Garlic",
+            "quantity": "1 clove",
+            "notes": "Minced"
+          },
+          {
+            "item": "Curry Powder",
+            "quantity": "1 tbsp",
+            "notes": "Adjust to taste"
+          },
+          {
+            "item": "Olive Oil",
+            "quantity": "1 tbsp",
+            "notes": "For cooking"
+          }
+        ],
+        "nutritional_info": {
+          "calories": 370,
+          "carbs": 10,
+          "protein": 20,
+          "fat": 25,
+          "fiber": 8
+        }
+      }
+    ]
+  }
+}
+};
+
+        const mealPlan = data.response.meal_plan;
+        const mealsContainer = document.getElementById('meals-container');
+
+        mealPlan.meals.forEach(meal => {
+            const mealDiv = document.createElement('div');
+            mealDiv.classList.add('meal');
+
+            let ingredientsList = '';
+            meal.ingredients.forEach(ingredient => {
+                ingredientsList += `<li><strong>${ingredient.item}:</strong> ${ingredient.quantity} <em>(${ingredient.notes})</em></li>`;
+            });
+
+            mealDiv.innerHTML = `
+                <h3>${meal.meal_name}</h3>
+                <p>${meal.description}</p>
+                <h4>Ingredients:</h4>
+                <ul class="ingredients">${ingredientsList}</ul>
+                <div class="nutritional-info">
+                    <span><strong>Calories:</strong> ${meal.nutritional_info.calories}</span>
+                    <span><strong>Carbs:</strong> ${meal.nutritional_info.carbs}g</span>
+                    <span><strong>Protein:</strong> ${meal.nutritional_info.protein}g</span>
+                    <span><strong>Fat:</strong> ${meal.nutritional_info.fat}g</span>
+                    <span><strong>Fiber:</strong> ${meal.nutritional_info.fiber}g</span>
+                </div>
+            `;
+            mealsContainer.appendChild(mealDiv);
+        });
+
+        const downloadButton = document.getElementById('download');
+        downloadButton.addEventListener('click', function() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], {type: 'text/html'});
+            const url = URL.createObjectURL(blob);
+            this.href = url;
+            this.download = 'meal-plan.html';
+        });
+    </script>
+</body>
+</html>
