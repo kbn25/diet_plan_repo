@@ -34,7 +34,7 @@ public interface LfvFoodRepository extends JpaRepository<LfvFood, Long> {
     List<LfvFood> findAllowedFoods();
 
     // Find restricted foods
-    @Query("SELECT l FROM LfvFood l WHERE UPPER(l.limitation) IN ('RESTRICTED', 'LIMITED')")
+    @Query("SELECT l FROM LfvFood l WHERE UPPER(l.limitation) IN ('Restricted', 'Limited')")
     List<LfvFood> findRestrictedFoods();
 
     // Find by category and limitation

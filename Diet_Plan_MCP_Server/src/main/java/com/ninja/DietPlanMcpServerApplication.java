@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import com.ninja.service.LfvAndLchfBasedDietService;
+//import com.ninja.service.LfvAndLchfBasedDietService;
 import com.ninja.service.MealPlanningService;
 
 
@@ -25,8 +26,7 @@ public class DietPlanMcpServerApplication {
 	 * @return MethodToolCallbackProvider for automatic tool registration
 	 */
 	@Bean
-	public ToolCallbackProvider mealPlanTools(MealPlanningService mealPlanningService, LfvAndLchfBasedDietService lfvAndLchService) {
-		return MethodToolCallbackProvider.builder().toolObjects(mealPlanningService, lfvAndLchService).build();
+	public ToolCallbackProvider mealPlanTools(MealPlanningService mealPlanningService, LfvAndLchfBasedDietService lchfBasedDietService) {
+		return MethodToolCallbackProvider.builder().toolObjects(mealPlanningService, lchfBasedDietService).build();
 	}
-
 }

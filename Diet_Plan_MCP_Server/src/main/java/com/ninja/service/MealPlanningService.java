@@ -37,6 +37,10 @@ public class MealPlanningService {
 		this.nutrientRepository = nutrientRepository;
 	}
 
+	@Tool(description = "Check the server health")
+	public ResponseEntity<String> healthCheck() {
+		return ResponseEntity.ok("Meal Planner MCP Server is running!");
+	}
 	/**
 	 * MCP Tool: Search for foods by name This tool allows AI assistants to search
 	 * for foods in the database
