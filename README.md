@@ -1,27 +1,17 @@
-# diet_plan_repo
-Changes to be done in app property
-. Gemini API KEY
-. Server name if you are using different server
+Steps:
 
-Client port: 7070
-Server Port : 8090
+Diet_Plan_MCP_Server setup----
+	1. Change your DB config (DB name, username password) in application.properties
+	2. Perform Maven Clean Build
+	3. Start the server
+	4. Test in postman if server is able to connect from it using --- 
+	New MCP Collection > With Latest Postman edition you will get MCP option same as REST API
+	With New > MCP
+	Then select protocol as HTTP as this server is with SSE mode
+	http://localhost:9090/sse
+	5. Once you connect, you can see Tools, Prompts and Resources tabs.
+	6. Check under Tools tab if your tools are visible
+	
 
-Working Endpoints:
-/api/mcp/gemini/chat --------- Will invoke server tools
-/api/mcp/process   --------- Will get data from LLM weather food related or Diet Plan
-
-
-Prompts--
-/api/mcp/gemini/chat --- Get all allowed foods for LFV diet (OK and Moderation)
-
-/api/mcp/process ------ Based on above data generate a personalized diabetes-friendly meal plan for a 40-year-old person with Type 2 diabetes 
-with BMI 19.1f. Their diet preference is LFV (Low Fat Vegan) and cuisine preference is Vegan.  
-  CRITICAL ALLERGY SAFETY REQUIREMENTS:  They have allergies to: Diary
-  MEDICAL CONDITION SAFETY REQUIREMENTS: If the user has any medical conditions, completely exclude foods that may worsen or aggravate those conditions. 
-  ADDITIONAL DIETARY RESTRICTIONS:  
-  - For Low Fat Vegan diets: Refer above allowed food guidelines  
-  Create a full day's meal plan with pre-meal salads/appetizers, main meals, and snacks. Include exact portion sizes, calories, and timing.  
-  For each meal, provide detailed nutritional information including carbs, protein, fat, and fiber content.  
-  STRICTLY follow the dietary guidelines and restrictions mentioned above.  
-  Ensure that the same main ingredient is NOT used more than once across all meals in a single day.  
-  Format the response as a JSON object with the specified structure.
+Diet_Plan_MCP_Client----
+Change GEMINI_API_KEY and do Clean Build
