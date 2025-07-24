@@ -1,0 +1,1 @@
+These are the Inputs you guys will get from our app :- gender, age, height, weight, bmi, diabetes type, family history, medicalCondition,  allergies,  cuisinePreferences,  bloodSugarReadings

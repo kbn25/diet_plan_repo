@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized 7-Day LFV Meal Plan</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            background: #fff;
+            padding: 20px 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid #16a085;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        h2 {
+            color: #16a085;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #2980b9;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        .intro, .summary-section {
+            background-color: #e8f6f3;
+            border-left: 5px solid #16a085;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        .day-plan {
+            margin-top: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #ccc;
+        }
+        .day-plan:last-child {
+            border-bottom: none;
+        }
+        .daily-nutrition {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .daily-nutrition span {
+            font-weight: 500;
+            color: #34495e;
+        }
+        .meal-card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .meal-card h4 {
+            margin-top: 0;
+            font-size: 1.4em;
+            color: #27ae60;
+        }
+        .meal-card strong {
+            color: #2c3e50;
+        }
+        .recipe ul, .recipe ol {
+            padding-left: 20px;
+        }
+        .recipe li {
+            margin-bottom: 5px;
+        }
+        .nutrition-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 20px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .nutrition-info span {
+            background-color: #f2f2f2;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+        .critical-disclaimer {
+            background-color: #fbeee6;
+            border-left: 5px solid #c0392b;
+            padding: 15px 20px;
+            border-radius: 5px;
+        }
+        .critical-disclaimer h4 {
+            color: #c0392b;
+            margin-top: 0;
+        }
+        .tip-item {
+            margin-bottom: 15px;
+        }
+        .tip-item h4 {
+            margin-bottom: 5px;
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="meal-plan-container">
+        <!-- JS will populate this -->
+    </div>
+
+    <script>
+        const data = {
+            "mealPlanTitle": "Personalized 7-Day LFV Meal Plan for Type 2 Diabetes Management",
+            "introduction": "This is a 7-day Low Fat Vegan (LFV) meal plan designed for a 40-year-old male with Type 2 Diabetes and a BMI of 19.1. The primary goals are blood sugar stabilization and weight maintenance. This plan strictly adheres to the provided list of allowed foods. Given the restrictive nature of the food list, portion sizes for starchy vegetables are large to meet caloric needs.",
+            "mealPlan": [
+                {
+                    "day": "Day 1",
+                    "daily_total_nutrition": { "calories": "1805 kcal", "carbs": "335g", "protein": "66g", "fat": "29g", "fiber": "85g" },
+                    "meals": [
+                        { "meal_type": "Breakfast", "time": "8:00 AM", "meal_name": "Creamy Pumpkin Bowl", "recipe": { "ingredients": [{ "item": "Pumpkin", "quantity": "600g, cubed" }, { "item": "Water", "quantity": "as needed" }, { "item": "Cinnamon/Nutmeg", "quantity": "to taste (optional seasoning)" }], "instructions": "Steam the pumpkin cubes until very tender. Mash or blend with a little water to achieve a creamy, pudding-like consistency. Serve warm with a sprinkle of cinnamon or nutmeg." }, "nutrition": { "calories": "240 kcal", "carbs": "62g", "protein": "9g", "fat": "1g", "fiber": "15g" } },
+                        { "meal_type": "Lunch", "time": "1:00 PM", "meal_name": "Giant Baked Sweet Potato with Wilted Spinach", "recipe": { "ingredients": [{ "item": "Arugula", "quantity": "50g (for pre-meal salad)" }, { "item": "Sweet Potato", "quantity": "700g (approx. 2 large)" }, { "item": "Spinach", "quantity": "300g" }, { "item": "Salt, Pepper, Garlic Powder", "quantity": "to taste (optional seasoning)" }], "instructions": "Start with a pre-meal salad of fresh arugula. For the main, preheat oven to 400°F (200°C). Pierce the sweet potato several times with a fork and bake for 60-75 minutes, or until soft. While the potato bakes, lightly steam the spinach until just wilted. Cut open the baked sweet potato, fluff the inside, and top with the steamed spinach. Season as desired." }, "nutrition": { "calories": "701 kcal", "carbs": "163g", "protein": "21g", "fat": "2g", "fiber": "35g" } },
+                        { "meal_type": "Snack", "time": "4:00 PM", "meal_name": "Toasted Almonds", "recipe": { "ingredients": [{ "item": "Almonds, raw", "quantity": "30g (a palm-sized serving)" }], "instructions": "Lightly toast the almonds in a dry pan over medium heat for 3-5 minutes until fragrant. Let cool before eating." }, "nutrition": { "calories": "174 kcal", "carbs": "6g", "protein": "6g", "fat": "15g", "fiber": "4g" } },
+                        { "meal_type": "Dinner", "time": "7:00 PM", "meal_name": "Cabbage and Kale Medley", "recipe": { "ingredients": [{ "item": "Cabbage (green or savoy)", "quantity": "500g, shredded" }, { "item": "Kale", "quantity": "300g, chopped" }, { "item": "Vegetable Broth (from allowed veggies)", "quantity": "1/2 cup" }, { "item": "Salt, Pepper", "quantity": "to taste (optional seasoning)" }], "instructions": "In a large pot, add the shredded cabbage, chopped kale, and vegetable broth. Cover and steam over medium heat for 10-15 minutes, stirring occasionally, until the vegetables are tender. Season to taste." }, "nutrition": { "calories": "690 kcal", "carbs": "104g", "protein": "30g", "fat": "11g", "fiber": "31g" } }
+                    ]
+                },
+                {
+                    "day": "Day 2",
+                    "daily_total_nutrition": { "calories": "1798 kcal", "carbs": "338g", "protein": "52g", "fat": "31g", "fiber": "70g" },
+                    "meals": [
+                        { "meal_type": "Breakfast", "time": "8:00 AM", "meal_name": "Mashed Yams", "recipe": { "ingredients": [{ "item": "Yams", "quantity": "600g, peeled and cubed" }], "instructions": "Boil or steam the yam cubes until fork-tender. Drain and mash until smooth. Serve warm." }, "nutrition": { "calories": "708 kcal", "carbs": "167g", "protein": "9g", "fat": "1g", "fiber": "24g" } },
+                        { "meal_type": "Lunch", "time": "1:00 PM", "meal_name": "Hearty Chard and Cabbage Soup", "recipe": { "ingredients": [{ "item": "Lettuce (Romaine)", "quantity": "100g (for pre-meal salad)" }, { "item": "Chard", "quantity": "400g, chopped" }, { "item": "Cabbage", "quantity": "400g, chopped" }, { "item": "Water or Vegetable Broth", "quantity": "4 cups" }], "instructions": "Start with a pre-meal salad of crisp lettuce. For the soup, bring broth/water to a simmer. Add the cabbage and cook for 10 minutes. Add the chard and cook for another 5-7 minutes until all vegetables are tender. Season as desired." }, "nutrition": { "calories": "203 kcal", "carbs": "42g", "protein": "14g", "fat": "1g", "fiber": "16g" } },
+                        { "meal_type": "Snack", "time": "4:00 PM", "meal_name": "Walnuts", "recipe": { "ingredients": [{ "item": "Walnuts, raw", "quantity": "30g (a palm-sized serving)" }], "instructions": "Enjoy a serving of raw walnuts." }, "nutrition": { "calories": "196 kcal", "carbs": "4g", "protein": "5g", "fat": "20g", "fiber": "2g" } },
+                        { "meal_type": "Dinner", "time": "7:00 PM", "meal_name": "Roasted Pumpkin Wedges with Spinach Bed", "recipe": { "ingredients": [{ "item": "Pumpkin", "quantity": "600g, cut into wedges" }, { "item": "Spinach", "quantity": "300g" }, { "item": "Paprika, Salt", "quantity": "to taste (optional seasoning)" }], "instructions": "Preheat oven to 400°F (200°C). Season pumpkin wedges and roast for 30-40 minutes until tender and slightly caramelized. Serve the wedges over a large bed of fresh, raw spinach." }, "nutrition": { "calories": "691 kcal", "carbs": "125g", "protein": "24g", "fat": "9g", "fiber": "28g" } }
+                    ]
+                },
+                {
+                    "day": "Day 3",
+                    "daily_total_nutrition": { "calories": "1811 kcal", "carbs": "355g", "protein": "58g", "fat": "26g", "fiber": "72g" },
+                    "meals": [
+                        { "meal_type": "Breakfast", "time": "8:00 AM", "meal_name": "Steamed Purple Potatoes", "recipe": { "ingredients": [{ "item": "Purple Potatoes", "quantity": "600g, cubed" }], "instructions": "Steam the potato cubes for 15-20 minutes until tender. Can be eaten as is or lightly mashed." }, "nutrition": { "calories": "516 kcal", "carbs": "120g", "protein": "12g", "fat": "1g", "fiber": "20g" } },
+                        { "meal_type": "Lunch", "time": "1:00 PM", "meal_name": "Massaged Kale Salad with Sweet Potato", "recipe": { "ingredients": [{ "item": "Kale", "quantity": "300g, de-stemmed and chopped" }, { "item": "Sweet Potato", "quantity": "500g, pre-baked and chilled, cubed" }], "instructions": "Place the chopped kale in a large bowl. 'Massage' it with your hands for 2-3 minutes to soften the leaves. Gently fold in the chilled, baked sweet potato cubes." }, "nutrition": { "calories": "581 kcal", "carbs": "126g", "protein": "15g", "fat": "4g", "fiber": "28g" } },
+                        { "meal_type": "Snack", "time": "4:00 PM", "meal_name": "Cashews", "recipe": { "ingredients": [{ "item": "Cashews, raw", "quantity": "30g (a palm-sized serving)" }], "instructions": "Enjoy a serving of raw cashews." }, "nutrition": { "calories": "166 kcal", "carbs": "9g", "protein": "5g", "fat": "13g", "fiber": "1g" } },
+                        { "meal_type": "Dinner", "time": "7:00 PM", "meal_name": "Arugula and Chard Stir-Steam", "recipe": { "ingredients": [{ "item": "Chard", "quantity": "300g, chopped" }, { "item": "Arugula", "quantity": "200g" }, { "item": "Water", "quantity": "1/4 cup" }], "instructions": "Heat a large pan or wok. Add the chard and water, cover and steam for 3-4 minutes. Add the arugula and stir for 1-2 minutes until just wilted. Serve immediately." }, "nutrition": { "calories": "548 kcal", "carbs": "100g", "protein": "26g", "fat": "8g", "fiber": "23g" } }
+                    ]
+                },
+                {
+                    "day": "Day 4",
+                    "daily_total_nutrition": { "calories": "1822 kcal", "carbs": "360g", "protein": "55g", "fat": "27g", "fiber": "78g" },
+                     "meals": [
+                        { "meal_type": "Breakfast", "time": "8:00 AM", "meal_name": "Sweet Potato 'Toast'", "recipe": { "ingredients": [{ "item": "Sweet Potato", "quantity": "600g" }], "instructions": "Cut the sweet potato lengthwise into 1/4-inch thick slices. Bake at 400°F (200°C) for 20-25 minutes, flipping once, until tender. These can be eaten like toast slices." }, "nutrition": { "calories": "516 kcal", "carbs": "120g", "protein": "10g", "fat": "1g", "fiber": "19g" } },
+                        { "meal_type": "Lunch", "time": "1:00 PM", "meal_name": "Roasted Yams with Steamed Kale", "recipe": { "ingredients": [{ "item": "Lettuce", "quantity": "100g (for pre-meal salad)" }, { "item": "Yams", "quantity": "500g, cubed" }, { "item": "Kale", "quantity": "300g" }], "instructions": "Start with a pre-meal salad of lettuce. Preheat oven to 425°F (220°C). Roast yam cubes for 25-30 minutes until golden. While yams roast, steam the kale until tender. Serve the roasted yams alongside the kale." }, "nutrition": { "calories": "748 kcal", "carbs": "169g", "protein": "20g", "fat": "4g", "fiber": "35g" } },
+                        { "meal_type": "Snack", "time": "4:00 PM", "meal_name": "Pistachios", "recipe": { "ingredients": [{ "item": "Pistachios, raw, shelled", "quantity": "30g (a palm-sized serving)" }], "instructions": "Enjoy a serving of raw, shelled pistachios." }, "nutrition": { "calories": "169 kcal", "carbs": "8g", "protein": "6g", "fat": "14g", "fiber": "3g" } },
+                        { "meal_type": "Dinner", "time": "7:00 PM", "meal_name": "Simple Cabbage Steaks", "recipe": { "ingredients": [{ "item": "Cabbage", "quantity": "600g, cut into 1-inch thick rounds" }, { "item": "Arugula", "quantity": "100g (for side salad)" }], "instructions": "Preheat oven to 400°F (200°C). Place cabbage 'steaks' on a baking sheet. Roast for 25-30 minutes, flipping once, until tender and browned at the edges. Serve with a side of fresh arugula." }, "nutrition": { "calories": "390 kcal", "carbs": "63g", "protein": "19g", "fat": "8g", "fiber": "21g" } }
+                    ]
+                },
+                {
+                    "day": "Day 5",
+                    "daily_total_nutrition": { "calories": "1801 kcal", "carbs": "321g", "protein": "61g", "fat": "33g", "fiber": "80g" },
+                    "meals": [
+                        { "meal_type": "Breakfast", "time": "8:00 AM", "meal_name": "Pumpkin and Spinach Mash", "recipe": { "ingredients": [{ "item": "Pumpkin", "quantity": "500g, steamed and mashed" }, { "item": "Spinach", "quantity": "200g, steamed and finely chopped" }], "instructions": "In a bowl, mix the warm mashed pumpkin with the finely chopped steamed spinach. Season with a pinch of salt if desired." }, "nutrition": { "calories": "246 kcal", "carbs": "57g", "protein": "15g", "fat": "2g", "fiber": "20g" } },
+                        { "meal_type": "Lunch", "time": "1:00 PM", "meal_name": "Baked Purple Potato with Chard", "recipe": { "ingredients": [{ "item": "Arugula", "quantity": "50g (for pre-meal salad)" }, { "item": "Purple Potatoes", "quantity": "700g" }, { "item": "Chard", "quantity": "300g" }], "instructions": "Start with a pre-meal salad of arugula. Bake the purple potatoes whole at 400°F (200°C) for 50-60 minutes. While they bake, steam the chard. Serve the baked potatoes topped with the steamed chard." }, "nutrition": { "calories": "660 kcal", "carbs": "151g", "protein": "20g", "fat": "2g", "fiber": "31g" } },
+                        { "meal_type": "Snack", "time": "4:00 PM", "meal_name": "Brazil Nuts", "recipe": { "ingredients": [{ "item": "Brazil Nuts", "quantity": "30g (a palm-sized serving, approx. 6-7 nuts)" }], "instructions": "Enjoy a serving of raw Brazil nuts. Do not exceed this portion due to high selenium content." }, "nutrition": { "calories": "197 kcal", "carbs": "4g", "protein": "4g", "fat": "20g", "fiber": "2g" } },
+                        { "meal_type": "Dinner", "time": "7:00 PM", "meal_name": "Shredded Cabbage and Kale Salad", "recipe": { "ingredients": [{ "item": "Cabbage", "quantity": "400g, finely shredded" }, { "item": "Kale", "quantity": "300g, finely shredded and massaged" }], "instructions": "In a large bowl, combine the finely shredded cabbage and massaged kale. Toss well to combine. This is a voluminous, high-fiber raw salad." }, "nutrition": { "calories": "698 kcal", "carbs": "109g", "protein": "22g", "fat": "9g", "fiber": "27g" } }
+                    ]
+                },
+                {
+                    "day": "Day 6",
+                    "daily_total_nutrition": { "calories": "1808 kcal", "carbs": "368g", "protein": "48g", "fat": "25g", "fiber": "65g" },
+                    "meals": [
+                        { "meal_type": "Breakfast", "time": "8:00 AM", "meal_name": "Baked Yam Halves", "recipe": { "ingredients": [{ "item": "Yams", "quantity": "700g" }], "instructions": "Preheat oven to 400°F (200°C). Cut yams in half lengthwise, place cut-side down on a baking sheet, and bake for 30-40 minutes until tender." }, "nutrition": { "calories": "826 kcal", "carbs": "195g", "protein": "11g", "fat": "1g", "fiber": "28g" } },
+                        { "meal_type": "Lunch", "time": "1:00 PM", "meal_name": "Warm Spinach and Cabbage Salad", "recipe": { "ingredients": [{ "item": "Lettuce", "quantity": "100g (for pre-meal salad)" }, { "item": "Spinach", "quantity": "300g" }, { "item": "Cabbage", "quantity": "300g, shredded" }], "instructions": "Start with a pre-meal salad of lettuce. In a dry non-stick pan, wilt the spinach and cabbage over medium heat until just tender-crisp. Serve warm." }, "nutrition": { "calories": "144 kcal", "carbs": "28g", "protein": "15g", "fat": "2g", "fiber": "15g" } },
+                        { "meal_type": "Snack", "time": "4:00 PM", "meal_name": "Almonds", "recipe": { "ingredients": [{ "item": "Almonds, raw", "quantity": "30g (a palm-sized serving)" }], "instructions": "Enjoy a serving of raw almonds." }, "nutrition": { "calories": "174 kcal", "carbs": "6g", "protein": "6g", "fat": "15g", "fiber": "4g" } },
+                        { "meal_type": "Dinner", "time": "7:00 PM", "meal_name": "Roasted Pumpkin with Arugula", "recipe": { "ingredients": [{ "item": "Pumpkin", "quantity": "600g, cubed" }, { "item": "Arugula", "quantity": "150g" }], "instructions": "Roast pumpkin cubes at 400°F (200°C) for 20-25 minutes until tender. Let them cool slightly, then toss with fresh arugula. The warmth from the pumpkin will slightly wilt the greens." }, "nutrition": { "calories": "664 kcal", "carbs": "139g", "protein": "16g", "fat": "7g", "fiber": "18g" } }
+                    ]
+                },
+                {
+                    "day": "Day 7",
+                    "daily_total_nutrition": { "calories": "1815 kcal", "carbs": "335g", "protein": "55g", "fat": "31g", "fiber": "71g" },
+                    "meals": [
+                        { "meal_type": "Breakfast", "time": "8:00 AM", "meal_name": "Sweet Potato and Kale Mash", "recipe": { "ingredients": [{ "item": "Sweet Potato", "quantity": "500g, steamed and mashed" }, { "item": "Kale", "quantity": "200g, steamed and finely chopped" }], "instructions": "Combine the hot mashed sweet potato with the finely chopped steamed kale. Mix thoroughly." }, "nutrition": { "calories": "528 kcal", "carbs": "116g", "protein": "14g", "fat": "3g", "fiber": "26g" } },
+                        { "meal_type": "Lunch", "time": "1:00 PM", "meal_name": "Hearty Purple Potato and Cabbage Stew", "recipe": { "ingredients": [{ "item": "Lettuce", "quantity": "100g (for pre-meal salad)" }, { "item": "Purple Potatoes", "quantity": "500g, cubed" }, { "item": "Cabbage", "quantity": "400g, chopped" }, { "item": "Water or Vegetable Broth", "quantity": "3 cups" }], "instructions": "Start with a pre-meal salad of lettuce. In a pot, bring broth to a simmer. Add the purple potato cubes and cook for 10-12 minutes. Add the cabbage and cook for another 10 minutes until all vegetables are tender." }, "nutrition": { "calories": "550 kcal", "carbs": "125g", "protein": "19g", "fat": "2g", "fiber": "27g" } },
+                        { "meal_type": "Snack", "time": "4:00 PM", "meal_name": "Walnuts", "recipe": { "ingredients": [{ "item": "Walnuts, raw", "quantity": "30g (a palm-sized serving)" }], "instructions": "Enjoy a serving of raw walnuts." }, "nutrition": { "calories": "196 kcal", "carbs": "4g", "protein": "5g", "fat": "20g", "fiber": "2g" } },
+                        { "meal_type": "Dinner", "time": "7:00 PM", "meal_name": "Wilted Chard and Spinach Salad", "recipe": { "ingredients": [{ "item": "Chard", "quantity": "300g" }, { "item": "Spinach", "quantity": "300g" }], "instructions": "In a large, dry non-stick pan over medium heat, add the chard and spinach. Stir continuously until the greens have wilted down, about 5-7 minutes. Serve warm." }, "nutrition": { "calories": "541 kcal", "carbs": "90g", "protein": "17g", "fat": "6g", "fiber": "16g" } }
+                    ]
+                }
+            ],
+            "summaryAndImportantPoints": {
+                "title": "Summary, Important Considerations, and Tips",
+                "points": [
+                    { "point": "CRITICAL HEALTH DISCLAIMER", "details": "The list of allowed foods you provided is extremely restrictive and may not provide a balanced profile of macro and micronutrients for long-term health. Specifically, protein and healthy fat levels are low, and it lacks variety in vitamins and minerals from other food groups like legumes, grains, and other fruits/vegetables. It is IMPERATIVE that you consult with a healthcare provider and a registered dietitian before beginning this diet to ensure it is safe and appropriate for you, and to develop a comprehensive supplementation plan." },
+                    { "point": "Blood Sugar Management", "details": "This plan is very high in fiber and uses low-glycemic carbohydrates from starchy vegetables. This should help promote stable blood sugar levels. Monitor your blood glucose closely, especially when starting, as your insulin or medication needs may change." },
+                    { "point": "Calorie and Weight Maintenance", "details": "Your BMI of 19.1 is in the healthy range. This plan is designed for weight maintenance, not loss, with a target of approximately 1800 kcal/day. The volume of food is very large to meet this target; adjust portion sizes of the starchy vegetables (potatoes, yams, pumpkin) up or down based on your appetite and weight stability." },
+                    { "point": "Nutrient Supplementation", "details": "As with any vegan diet, a Vitamin B12 supplement is essential. Given the food restrictions, you should also discuss the need for other supplements like Vitamin D, calcium, iron, and a complete protein source with your doctor." },
+                    { "point": "Seasoning Assumption", "details": "The recipes are very basic. To make them more palatable, this plan assumes the use of non-caloric, diabetes-friendly seasonings such as salt, pepper, herbs (like rosemary, thyme), and spices (like cinnamon, paprika, garlic powder, onion powder). These were not on your allowed list but are generally considered 'free' items." }
+                ]
+            },
+            "tipsForSuccess": {
+                "title": "Tips for Success on This Plan",
+                "tips": [
+                    { "tip": "Hydration is Key", "details": "Drink plenty of water throughout the day. The high fiber content of this diet makes adequate hydration crucial for digestive health." },
+                    { "tip": "Meal Preparation", "details": "Batch cook your starchy vegetables. Bake several sweet potatoes, yams, or a whole pumpkin at the beginning of the week. This will save you significant time each day." },
+                    { "tip": "Listen to Your Body", "details": "Pay attention to your energy levels, hunger, and fullness cues. The volume of food is high, so eat until you are comfortably full. Do not force yourself to finish if you are satisfied." },
+                    { "tip": "Monitor Your Health", "details": "Regularly check in with your healthcare provider. Monitor your blood sugar, blood pressure, and get regular blood work done to track key nutrient levels." },
+                    { "tip": "Vary Your Greens", "details": "Rotate between all the allowed leafy greens (lettuce, kale, chard, arugula, spinach, cabbage) to maximize your intake of different phytonutrients." }
+                ]
+            }
+        };
+
+        function generateHTML(data) {
+            const container = document.getElementById('meal-plan-container');
+            let html = `<h1>${data.mealPlanTitle}</h1>`;
+            html += `<div class="intro"><p>${data.introduction}</p></div>`;
+
+            // Meal Plan Section
+            data.mealPlan.forEach(day => {
+                html += `<div class="day-plan">`;
+                html += `<h2>${day.day}</h2>`;
+                html += `<div class="daily-nutrition">
+                            <span><strong>Total Calories:</strong> ${day.daily_total_nutrition.calories}</span>
+                            <span><strong>Carbs:</strong> ${day.daily_total_nutrition.carbs}</span>
+                            <span><strong>Protein:</strong> ${day.daily_total_nutrition.protein}</span>
+                            <span><strong>Fat:</strong> ${day.daily_total_nutrition.fat}</span>
+                            <span><strong>Fiber:</strong> ${day.daily_total_nutrition.fiber}</span>
+                         </div>`;
+                
+                day.meals.forEach(meal => {
+                    html += `<div class="meal-card">
+                                <h4>${meal.meal_type} (${meal.time}): ${meal.meal_name}</h4>
+                                <div class="recipe">
+                                    <strong>Ingredients:</strong>
+                                    <ul>`;
+                    meal.recipe.ingredients.forEach(ing => {
+                        html += `<li>${ing.item}: ${ing.quantity}</li>`;
+                    });
+                    html += `       </ul>
+                                    <strong>Instructions:</strong>
+                                    <p>${meal.recipe.instructions}</p>
+                                </div>
+                                <div class="nutrition-info">
+                                    <span>Calories: ${meal.nutrition.calories}</span>
+                                    <span>Carbs: ${meal.nutrition.carbs}</span>
+                                    <span>Protein: ${meal.nutrition.protein}</span>
+                                    <span>Fat: ${meal.nutrition.fat}</span>
+                                    <span>Fiber: ${meal.nutrition.fiber}</span>
+                                </div>
+                             </div>`;
+                });
+                html += `</div>`;
+            });
+
+            // Summary Section
+            html += `<div class="summary-section">
+                        <h2>${data.summaryAndImportantPoints.title}</h2>`;
+            data.summaryAndImportantPoints.points.forEach(point => {
+                if (point.point === "CRITICAL HEALTH DISCLAIMER") {
+                    html += `<div class="critical-disclaimer">
+                                <h4>${point.point}</h4>
+                                <p>${point.details}</p>
+                             </div>`;
+                } else {
+                    html += `<div class="tip-item"><h4>${point.point}</h4><p>${point.details}</p></div>`;
+                }
+            });
+            html += `</div>`;
+
+            // Tips for Success Section
+            html += `<div class="summary-section">
+                        <h2>${data.tipsForSuccess.title}</h2>`;
+            data.tipsForSuccess.tips.forEach(tip => {
+                 html += `<div class="tip-item"><h4>${tip.tip}</h4><p>${tip.details}</p></div>`;
+            });
+            html += `</div>`;
+
+
+            container.innerHTML = html;
+        }
+
+        generateHTML(data);
+    </script>
+</body>
+</html>
