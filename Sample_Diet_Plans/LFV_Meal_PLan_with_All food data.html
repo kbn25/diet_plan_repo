@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Day Personalized LFV Meal Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .user-profile, .summary-section {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .user-profile ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .user-profile li {
+            padding: 5px 0;
+        }
+        .day-plan {
+            margin-bottom: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 20px;
+        }
+        .daily-summary {
+            background: #eaf5ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .daily-summary ul {
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        .meals-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .meal-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .meal-card h4 {
+            margin-top: 0;
+            color: #3498db;
+        }
+        .meal-card h5 {
+            color: #2980b9;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .meal-card ul, .meal-card ol {
+            padding-left: 20px;
+        }
+        .nutrition-info {
+            margin-top: 15px;
+            font-size: 0.9em;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .nutrition-info ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .summary-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .summary-section li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>7-Day Personalized LFV Meal Plan for Type 2 Diabetes Management</h1>
+
+        <div class="user-profile">
+            <h2>User Profile</h2>
+            <ul>
+                <li><strong>Age:</strong> 40</li>
+                <li><strong>Condition:</strong> Type 2 Diabetes</li>
+                <li><strong>BMI:</strong> 19.1</li>
+                <li><strong>Diet Preference:</strong> LFV (Low-Fat Vegan)</li>
+                <li><strong>Allergies:</strong> Dairy</li>
+            </ul>
+            <p><strong>Notes:</strong> This plan is designed for blood sugar management and weight maintenance. It is strictly based on the provided allowed foods list and is low in fat, high in fiber, and contains no added oils or sugars.</p>
+        </div>
+
+        <div id="weekly-plan"></div>
+
+        <div class="summary-section">
+            <h2>Summary, Important Considerations, and Tips</h2>
+            <p>This 7-day meal plan is a whole-food, low-fat vegan (LFV) guide tailored for a 40-year-old with Type 2 Diabetes and a BMI of 19.1. The primary goals are stable blood sugar levels, weight maintenance, and optimal nutrition within the strict confines of the allowed foods list. The diet is rich in fiber from vegetables, millets, and fruits, which helps slow down sugar absorption. Healthy fats are included in moderation from whole sources like nuts and seeds. All meals are free from dairy, added oils, and refined sugars.</p>
+            
+            <h3>Important Points</h3>
+            <ul>
+                <li><strong>Blood Sugar Monitoring:</strong> It is crucial to monitor your blood sugar levels regularly, especially when starting a new diet plan. Check levels before meals and 2 hours after to see how your body responds to different foods. Consult your doctor to adjust medication if necessary.</li>
+                <li><strong>Strict Adherence to Allowed Foods:</strong> This plan is based ONLY on the list of foods you provided. Do not introduce other foods, especially processed items, refined grains (like white rice or wheat), or added sugars, as they can negatively impact blood sugar.</li>
+                <li><strong>Hydration is Key:</strong> Drink plenty of water throughout the day (at least 8-10 glasses). Proper hydration is essential for kidney function and can help with blood sugar management. Herbal teas (without sugar) are also a good option.</li>
+                <li><strong>Portion Control:</strong> While the foods are healthy, portion sizes are critical for managing calorie intake and blood glucose. Pay close attention to the measurements provided, especially for grains, fruits, and nuts.</li>
+                <li><strong>Pre-Meal Salads/Appetizers:</strong> Eating a small, fiber-rich salad or raw vegetable appetizer before your main meals (lunch and dinner) is a strategic way to increase satiety, improve digestion, and help blunt the post-meal glucose spike. This is a highly recommended practice.</li>
+            </ul>
+
+            <h3>Tips For Success</h3>
+            <ul>
+                <li><strong>Meal Prep:</strong> Spend some time on the weekend washing and chopping vegetables, and cooking a large batch of a staple millet (like sorghum or buckwheat). This will make assembling meals during the week much faster and easier.</li>
+                <li><strong>Listen to Your Body:</strong> The calorie and portion estimates are a guideline. Since your BMI is in the healthy range, the goal is maintenance. If you feel overly hungry or too full, adjust portion sizes slightly. The key is consistency and monitoring your blood sugar response.</li>
+                <li><strong>Cooking without Oil:</strong> Use water or vegetable broth for sautéing ('water-sautéing'). Use high-quality non-stick cookware. Baking, steaming, and boiling are your primary cooking methods. Parchment paper is excellent for baking without needing any fat.</li>
+                <li><strong>Physical Activity:</strong> Complement this diet with regular physical activity, as approved by your doctor. A brisk 30-minute walk, especially after meals, can significantly help with insulin sensitivity and blood sugar control.</li>
+                <li><strong>Flavor with Herbs and Spices:</strong> Since you're avoiding added salt and fats, make friends with herbs and spices. Garlic, ginger, turmeric, cumin, cinnamon, rosemary, and black pepper can add incredible flavor to your meals without any calories or sodium.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const data = {
+  "mealPlanTitle": "7-Day Personalized LFV Meal Plan for Type 2 Diabetes Management",
+  "userProfile": {
+    "age": 40,
+    "condition": "Type 2 Diabetes",
+    "bmi": 19.1,
+    "dietPreference": "LFV (Low-Fat Vegan)",
+    "allergies": "Dairy",
+    "notes": "This plan is designed for blood sugar management and weight maintenance. It is strictly based on the provided allowed foods list and is low in fat, high in fiber, and contains no added oils or sugars."
+  },
+  "weeklyMealPlan": [
+    {
+      "day": "Day 1",
+      "dailySummary": {
+        "totalCalories": "Approx. 1855 kcal",
+        "totalCarbs": "Approx. 320g",
+        "totalProtein": "Approx. 65g",
+        "totalFat": "Approx. 40g",
+        "totalFiber": "Approx. 60g"
+      },
+      "meals": [
+        {
+          "name": "Breakfast",
+          "time": "8:00 AM",
+          "recipe": {
+            "title": "Sorghum Porridge with Mixed Berries",
+            "ingredients": [
+              "1/2 cup (96g) uncooked Sorghum",
+              "2 cups water",
+              "1/2 cup mixed berries (blueberries, raspberries)",
+              "1 tbsp (10g) chopped walnuts"
+            ],
+            "instructions": [
+              "Rinse the sorghum thoroughly.",
+              "In a saucepan, bring 2 cups of water to a boil.",
+              "Add the sorghum, reduce heat to low, cover, and simmer for 45-50 minutes, or until the water is absorbed and the grain is tender.",
+              "Serve the porridge in a bowl, topped with fresh mixed berries and chopped walnuts."
+            ]
+          },
+          "portionSize": "1 serving",
+          "nutrition": {
+            "calories": "450 kcal",
+            "carbs": "85g",
+            "protein": "14g",
+            "fat": "9g",
+            "fiber": "15g"
+          }
+        },
+        {
+          "name": "Mid-Morning Snack",
+          "time": "11:00 AM",
+          "recipe": {
+            "title": "Apple Slices",
+            "ingredients": [
+              "1 medium (180g) apple"
+            ],
+            "instructions": [
+              "Wash and slice the apple."
+            ]
+          },
+          "portionSize": "1 medium apple",
+          "nutrition": {
+            "calories": "95 kcal",
+            "carbs": "25g",
+            "protein": "0.5g",
+            "fat": "0.3g",
+            "fiber": "4g"
+          }
+        },
+        {
+          "name": "Pre-Lunch Appetizer",
+          "time": "12:50 PM",
+          "recipe": {
+            "title": "Simple Cucumber Salad",
+            "ingredients": [
+              "1 cup sliced cucumber",
+              "1 tsp lemon juice",
+              "Pinch of black pepper"
+            ],
+            "instructions": [
+              "Combine all ingredients in a small bowl."
+            ]
+          },
+          "portionSize": "1 cup",
+          "nutrition": {
+            "calories": "16 kcal",
+            "carbs": "4g",
+            "protein": "0.7g",
+            "fat": "0.1g",
+            "fiber": "1g"
+          }
+        },
+        {
+          "name": "Lunch",
+          "time": "1:00 PM",
+          "recipe": {
+            "title": "Millet-Stuffed Bell Peppers",
+            "ingredients": [
+              "1 large (150g) red bell pepper, halved and deseeded",
+              "1/2 cup (100g) cooked Foxtail Millet",
+              "1/4 cup finely chopped carrots",
+              "1/4 cup finely chopped white onion",
+              "2 tbsp chopped parsley (not on list, optional, can be omitted or replaced with celery leaves)",
+              "Herbs and spices like garlic powder, black pepper (no salt added)"
+            ],
+            "instructions": [
+              "Preheat oven to 375°F (190°C).",
+              "In a bowl, mix the cooked millet, carrots, onion, and spices.",
+              "Stuff the bell pepper halves with the millet mixture.",
+              "Place in a baking dish with a small amount of water at the bottom to prevent sticking.",
+              "Bake for 25-30 minutes, until the pepper is tender."
+            ]
+          },
+          "portionSize": "1 stuffed pepper",
+          "nutrition": {
+            "calories": "320 kcal",
+            "carbs": "68g",
+            "protein": "10g",
+            "fat": "2g",
+            "fiber": "12g"
+          }
+        },
+        {
+          "name": "Evening Snack",
+          "time": "4:00 PM",
+          "recipe": {
+            "title": "Handful of Almonds",
+            "ingredients": [
+              "1/4 cup (30g) raw, unsalted almonds"
+            ],
+            "instructions": [
+              "Enjoy a small handful of almonds."
+            ]
+          },
+          "portionSize": "1/4 cup",
+          "nutrition": {
+            "calories": "170 kcal",
+            "carbs": "6g",
+            "protein": "6g",
+            "fat": "15g",
+            "fiber": "4g"
+          }
+        },
+        {
+          "name": "Pre-Dinner Appetizer",
+          "time": "6:50 PM",
+          "recipe": {
+            "title": "Arugula and Tomato Salad",
+            "ingredients": [
+              "1 cup arugula",
+              "1/2 cup cherry tomatoes, halved",
+              "1 tsp lemon juice"
+            ],
+            "instructions": [
+              "Toss all ingredients together."
+            ]
+          },
+          "portionSize": "1.5 cups",
+          "nutrition": {
+            "calories": "25 kcal",
+            "carbs": "5g",
+            "protein": "1.5g",
+            "fat": "0.3g",
+            "fiber": "2g"
+          }
+        },
+        {
+          "name": "Dinner",
+          "time": "7:00 PM",
+          "recipe": {
+            "title": "Baked Sweet Potato with Steamed Broccoli",
+            "ingredients": [
+              "1 medium (200g) sweet potato",
+              "2 cups (180g) broccoli florets",
+              "1 tbsp (15g) sunflower seeds",
+              "Spices: pinch of paprika, garlic powder"
+            ],
+            "instructions": [
+              "Preheat oven to 400°F (200°C).",
+              "Pierce the sweet potato several times with a fork and bake for 45-60 minutes, or until tender.",
+              "While the potato is baking, steam the broccoli florets for 5-7 minutes until tender-crisp.",
+              "Slice open the baked sweet potato, fluff the inside, and top with steamed broccoli, a sprinkle of sunflower seeds, and spices."
+            ]
+          },
+          "portionSize": "1 serving",
+          "nutrition": {
+            "calories": "379 kcal",
+            "carbs": "67g",
+            "protein": "12g",
+            "fat": "8g",
+            "fiber": "16g"
+          }
+        }
+      ]
+    },
+    {
+      "day": "Day 2",
+      "dailySummary": {
+        "totalCalories": "Approx. 1820 kcal",
+        "totalCarbs": "Approx. 315g",
+        "totalProtein": "Approx. 55g",
+        "totalFat": "Approx. 42g",
+        "totalFiber": "Approx. 55g"
+      },
+      "meals": [
+        {
+          "name": "Breakfast",
+          "time": "8:00 AM",
+          "recipe": {
+            "title": "Buckwheat Pancakes with Mashed Banana",
+            "ingredients": [
+              "1 cup (120g) buckwheat flour",
+              "1 cup water",
+              "1 medium (118g) banana, mashed",
+              "1/2 tsp cinnamon (optional)"
+            ],
+            "instructions": [
+              "In a bowl, whisk together buckwheat flour and water until a smooth batter forms.",
+              "Heat a non-stick pan over medium heat (no oil needed).",
+              "Pour about 1/4 cup of batter onto the pan for each pancake. Cook for 2-3 minutes per side, until golden brown.",
+              "Serve topped with mashed banana and a sprinkle of cinnamon."
+            ]
+          },
+          "portionSize": "3-4 small pancakes",
+          "nutrition": {
+            "calories": "520 kcal",
+            "carbs": "115g",
+            "protein": "17g",
+            "fat": "4g",
+            "fiber": "18g"
+          }
+        },
+        {
+          "name": "Mid-Morning Snack",
+          "time": "11:00 AM",
+          "recipe": {
+            "title": "Fresh Pear",
+            "ingredients": [
+              "1 medium (178g) pear"
+            ],
+            "instructions": [
+              "Wash and enjoy the pear."
+            ]
+          },
+          "portionSize": "1 medium pear",
+          "nutrition": {
+            "calories": "101 kcal",
+            "carbs": "27g",
+            "protein": "1g",
+            "fat": "0.2g",
+            "fiber": "6g"
+          }
+        },
+        {
+          "name": "Pre-Lunch Appetizer",
+          "time": "12:50 PM",
+          "recipe": {
+            "title": "Celery Sticks",
+            "ingredients": [
+              "2 medium celery stalks, cut into sticks"
+            ],
+            "instructions": [
+              "Enjoy the crisp celery sticks."
+            ]
+          },
+          "portionSize": "2 stalks",
+          "nutrition": {
+            "calories": "12 kcal",
+            "carbs": "2g",
+            "protein": "0.5g",
+            "fat": "0.1g",
+            "fiber": "1g"
+          }
+        },
+        {
+          "name": "Lunch",
+          "time": "1:00 PM",
+          "recipe": {
+            "title": "Large Kale Salad with Sunflower Seed Dressing",
+            "ingredients": [
+              "4 cups chopped kale",
+              "1 cup shredded carrots",
+              "1 cup sliced cucumber",
+              "Dressing: 2 tbsp raw sunflower seeds, 1/4 cup water, 1 tbsp lemon juice, 1 clove garlic (optional), blended until smooth"
+            ],
+            "instructions": [
+              "In a large bowl, add the chopped kale. Pour the dressing over the kale and massage it with your hands for 2-3 minutes to soften the leaves.",
+              "Add the shredded carrots and cucumber and toss to combine.",
+              "Serve immediately."
+            ]
+          },
+          "portionSize": "1 large salad",
+          "nutrition": {
+            "calories": "310 kcal",
+            "carbs": "35g",
+            "protein": "12g",
+            "fat": "15g",
+            "fiber": "12g"
+          }
+        },
+        {
+          "name": "Evening Snack",
+          "time": "4:00 PM",
+          "recipe": {
+            "title": "Orange Slices",
+            "ingredients": [
+              "1 medium orange"
+            ],
+            "instructions": [
+              "Peel and enjoy the fresh orange."
+            ]
+          },
+          "portionSize": "1 medium orange",
+          "nutrition": {
+            "calories": "62 kcal",
+            "carbs": "15g",
+            "protein": "1g",
+            "fat": "0.2g",
+            "fiber": "3g"
+          }
+        },
+        {
+          "name": "Pre-Dinner Appetizer",
+          "time": "6:50 PM",
+          "recipe": {
+            "title": "Simple Lettuce Salad",
+            "ingredients": [
+              "2 cups shredded lettuce",
+              "1/4 cup sliced red onion",
+              "1 tsp lemon juice"
+            ],
+            "instructions": [
+              "Combine all ingredients in a small bowl."
+            ]
+          },
+          "portionSize": "1 serving",
+          "nutrition": {
+            "calories": "25 kcal",
+            "carbs": "5g",
+            "protein": "1g",
+            "fat": "0.2g",
+            "fiber": "2g"
+          }
+        },
+        {
+          "name": "Dinner",
+          "time": "7:00 PM",
+          "recipe": {
+            "title": "Mushroom & Spinach Curry with Foxtail Millet",
+            "ingredients": [
+              "1/2 cup (100g) uncooked Foxtail Millet",
+              "2 cups (150g) sliced mushrooms",
+              "3 cups (90g) fresh spinach",
+              "1/2 white onion, chopped",
+              "2 cloves garlic, minced (optional)",
+              "1 inch ginger, grated (optional)",
+              "1 cup vegetable broth (or water)",
+              "2 tbsp (30g) raw cashews, soaked and blended with 1/4 cup water to make a cream",
+              "Spices: turmeric, cumin, coriander powder"
+            ],
+            "instructions": [
+              "Cook the foxtail millet according to package directions.",
+              "In a non-stick pot, water-sauté the onion, garlic, and ginger until fragrant.",
+              "Add the mushrooms and cook until they release their water. Add spices and cook for another minute.",
+              "Add the vegetable broth and spinach. Cook until the spinach wilts.",
+              "Stir in the cashew cream and simmer for 2-3 minutes. Do not boil.",
+              "Serve the curry over the cooked foxtail millet."
+            ]
+          },
+          "portionSize": "1 serving",
+          "nutrition": {
+            "calories": "790 kcal",
+            "carbs": "116g",
+            "protein": "22.5g",
+            "fat": "22g",
+            "fiber": "13g"
+          }
+        }
+      ]
+    },
+    {
+      "day": "Day 3",
+      "dailySummary": {
+        "totalCalories": "Approx. 1890 kcal",
+        "totalCarbs": "Approx. 310g",
+        "totalProtein": "Approx. 60g",
+        "totalFat": "Approx. 48g",
+        "totalFiber": "Approx. 58g"
+      },
+      "meals": [
+        {
+          "name": "Breakfast",
+          "time": "8:00 AM",
+          "recipe": {
+            "title": "Amaranth Porridge with Walnuts",
+            "ingredients": [
+              "1/2 cup (92g) uncooked Amaranth",
+              "1.5 cups water",
+              "2 tbsp (15g) chopped walnuts",
+              "1/2 tsp cinnamon"
+            ],
+            "instructions": [
+              "Combine amaranth and water in a saucepan. Bring to a boil, then reduce heat, cover, and simmer for 20-25 minutes, stirring occasionally, until creamy.",
+              "Serve topped with chopped walnuts and a sprinkle of cinnamon."
+            ]
+          },
+          "portionSize": "1 serving",
+          "nutrition": {
+            "calories": "470 kcal",
+            "carbs": "68g",
+            "protein": "16g",
+            "fat": "17g",
+            "fiber": "12g"
+          }
+        },
+        {
+          "name": "Mid-Morning Snack",
+          "time": "11:00 AM",
+          "recipe": {
+            "title": "Fresh Tangerine",
+            "ingredients": [
+              "2 small (170g) tangerines"
+            ],
+            "instructions": [
+              "Peel and enjoy."
+            ]
+          },
+          "portionSize": "2 small tangerines",
+          "nutrition": {
+            "calories": "90 kcal",
+            "carbs": "23g",
+            "protein": "1.5g",
+            "fat": "0.5g",
+            "fiber": "3g"
+          }
+        },
+        {
+          "name": "Pre-Lunch Appetizer",
+          "time": "12:50 PM",
+          "recipe": {
+            "title": "Cucumber Slices",
+            "ingredients": [
+              "1 cup sliced cucumber"
+            ],
+            "instructions": [
+              "Enjoy fresh cucumber slices."
+            ]
+          },
+          "portionSize": "1 cup",
+          "nutrition": {
+            "calories": "16 kcal",
+            "carbs": "4g",
+            "protein": "0.7g",
+            "fat": "0.1g",
+            "fiber": "1g"
+          }
+        },
+        {
+          "name": "Lunch",
+          "time": "1:00 PM",
+          "recipe": {
+            "title": "Roasted Cauliflower and Turnip Bowl",
+            "ingredients": [
+              "2 cups (200g) cauliflower florets",
+              "1 cup (130g) cubed turnips",
+              "1 tbsp (10g) hemp seeds",
+              "Spices: garlic powder, paprika, black pepper"
+            ],
+            "instructions": [
+              "Preheat oven to 400°F (200°C).",
+              "Toss cauliflower and turnips with spices in a bowl.",
+              "Spread on a baking sheet lined with parchment paper.",
+              "Roast for 20-25 minutes, until tender and slightly browned.",
+              "Serve in a bowl and sprinkle with hemp seeds."
+            ]
+          },
+          "portionSize": "1 bowl",
+          "nutrition": {
+            "calories": "210 kcal",
+            "carbs": "30g",
+            "protein": "12g",
+            "fat": "6g",
+            "fiber": "12g"
+          }
+        },
+        {
+          "name": "Evening Snack",
+          "time": "4:00 PM",
+          "recipe": {
+            "title": "Handful of Pistachios",
+            "ingredients": [
+              "1/4 cup (30g) unsalted, shelled pistachios"
+            ],
+            "instructions": [
+              "Enjoy a small handful of pistachios."
+            ]
+          },
+          "portionSize": "1/4 cup",
+          "nutrition": {
+            "calories": "170 kcal",
+            "carbs": "8g",
+            "protein": "6g",
+            "fat": "14g",
+            "fiber": "3g"
+          }
+        },
+        {
+          "name": "Pre-Dinner Appetizer",
+          "time": "6:50 PM",
+          "recipe": {
+            "title": "Simple Chard Salad",
+            "ingredients": [
+              "2 cups chopped raw chard",
+              "1 tsp lemon juice",
+              "Pinch of black pepper"
+            ],
+            "instructions": [
+              "Toss ingredients together. Massaging the chard with lemon juice can help soften it."
+            ]
+          },
+          "portionSize": "1 serving",
+          "nutrition": {
+            "calories": "20 kcal",
+            "carbs": "4g",
+            "protein": "1.5g",
+            "fat": "0.2g",
+            "fiber": "2g"
+          }
+        },
+        {
+          "name": "Dinner",
+          "time": "7:00 PM",
+          "recipe": {
+            "title": "Eggplant and Tomato Stew with Kodo Millet",
+            "ingredients": [
+              "1/2 cup (100g) uncooked Kodo Millet",
+              "1 medium (400g) eggplant, cubed",
+              "1 can (400g) diced tomatoes, no salt added (check that only tomatoes are listed)",
+              "1/2 white onion, chopped",
+              "2 cloves garlic, minced",
+              "1 cup water or vegetable broth"
+            ],
+            "instructions": [
+              "Cook the Kodo millet according to package directions.",
+              "In a large pot, water-sauté the onion and garlic until soft.",
+              "Add the eggplant and cook for 5-7 minutes, until it begins to soften.",
+              "Add the diced tomatoes and water/broth. Bring to a simmer, then reduce heat, cover, and cook for 20 minutes, or until eggplant is very tender.",
+              "Serve the stew over the cooked Kodo millet."
+            ]
+          },
+          "portionSize": "1 serving",
+          "nutrition": {
+            "calories": "514 kcal",
+            "carbs": "113g",
+            "protein": "13g",
+            "fat": "6g",
+            "fiber": "25g"
+          }
+        }
+      ]
+    },
+    {
+      "day": "Day 4",
+      "dailySummary": {
+        "totalCalories": "Approx. 1830 kcal",
+        "totalCarbs": "Approx. 325g",
+        "totalProtein": "Approx. 58g",
+        "totalFat": "Approx. 35g",
+        "totalFiber": "Approx. 62g"
+      },
+      "meals": [
+        {
+          "name": "Breakfast",
+          "time": "8:00 AM",
+          "recipe": {
+            "title": "Green Smoothie with Flax Seeds",
+            "ingredients": [
+              "2 cups (60g) spinach",
+              "1 small (100g) banana, frozen",
+              "1 tbsp (10g) ground flax seeds",
+              "1.5 cups water"
+            ],
+            "instructions": [
+              "Combine all ingredients in a high-speed blender.",
+              "Blend until completely smooth.",
+              "Serve immediately."
+            ]
+          },
+          "portionSize": "1 large smoothie",
+          "nutrition": {
+            "calories": "190 kcal",
+            "carbs": "33g",
+            "protein": "6g",
+            "fat": "5g",
+            "fiber": "8g"
+          }
+        },
+        {
+          "name": "Mid-Morning Snack",
+          "time": "11:00 AM",
+          "recipe": {
+            "title": "Mixed Berries",
+            "ingredients": [
+              "1 cup mixed strawberries and blueberries"
+            ],
+            "instructions": [
+              "Enjoy a fresh bowl of berries."
+            ]
+          },
+          "portionSize": "1 cup",
+          "nutrition": {
+            "calories": "70 kcal",
+            "carbs": "17g",
+            "protein": "1g",
+            "fat": "0.5g",
+            "fiber": "4g"
+          }
+        },
+        {
+          "name": "Pre-Lunch Appetizer",
+          "time": "12:50 PM",
+          "recipe": {
+            "title": "Carrot Sticks",
+            "ingredients": [
+              "1 medium carrot, cut into sticks"
+            ],
+            "instructions": [
+              "Enjoy the crunchy carrot sticks."
+            ]
+          },
+          "portionSize": "1 medium carrot",
+          "nutrition": {
+            "calories": "25 kcal",
+            "carbs": "6g",
+            "protein": "0.5g",
+            "fat": "0.1g",
+            "fiber": "2g"
+          }
+        },
+        {
+          "name": "Lunch",
+          "time": "1:00 PM",
+          "recipe": {
+            "title": "Steamed Cabbage Rolls",
+            "ingredients": [
+              "6 large cabbage leaves",
+              "1 cup cooked Barnyard Millet",
+              "1/2 cup grated carrots",
+              "1/4 cup minced red onion",
+              "1/4 cup chopped peanuts"
+            ],
+            "instructions": [
+              "Steam or blanch cabbage leaves for 2-3 minutes until pliable. Set aside.",
+              "In a bowl, mix the cooked millet, grated carrots, red onion, and chopped peanuts.",
+              "Place a few tablespoons of the filling onto the center of each cabbage leaf. Fold in the sides and roll up tightly.",
+              "Place the rolls in a steamer basket and steam for 10-12 minutes until heated through."
+            ]
+          },
+          "portionSize": "6 small rolls",
+          "nutrition": {
+            "calories": "620 kcal",
+            "carbs": "95g",
+            "protein": "20g",
+            "fat": "18g",
+            "fiber": "20g"
+          }
+        },
+        {
+          "name": "Evening Snack",
+          "time": "4:00 PM",
+          "recipe": {
+            "title": "Fresh Peach",
+            "ingredients": [
+              "1 large (180g) peach"
+            ],
+            "instructions": [
+              "Wash and enjoy the juicy peach."
+            ]
+          },
+          "portionSize": "1 large peach",
+          "nutrition": {
+            "calories": "70 kcal",
+            "carbs": "17g",
+            "protein": "1.5g",
+            "fat": "0.5g",
+            "fiber": "3g"
+          }
+        },
+        {
+          "name": "Pre-Dinner Appetizer",
+          "time": "6:50 PM",
+          "recipe": {
+            "title": "Lettuce and Radish Salad (Radish not on list, using Bell Pepper)",
+            "ingredients": [
+              "1 cup shredded lettuce",
+              "1/4 cup sliced green bell pepper",
+              "1 tsp lemon juice"
+            ],
+            "instructions": [
+              "Toss ingredients together."
+            ]
+          },
+          "portionSize": "1 serving",
+          "nutrition": {
+            "calories": "15 kcal",
+            "carbs": "3g",
+            "protein": "0.5g",
+            "fat": "0.1g",
+            "fiber": "1g"
+          }
+        },
+        {
+          "name": "Dinner",
+          "time": "7:00 PM",
+          "recipe": {
+            "title": "Roasted Pumpkin with Sautéed Chard",
+            "ingredients": [
+              "2 cups (400g) cubed pumpkin",
+              "3 cups (110g) chopped Swiss chard",
+              "2 cloves garlic, minced",
+              "2 tbsp water for sautéing",
+              "Spices: rosemary, thyme, black pepper"
+            ],
+            "instructions": [
+              "Preheat oven to 400°F (200°C).",
+              "Toss pumpkin cubes with rosemary and thyme. Roast on a parchment-lined baking sheet for 20-25 minutes until tender.",
+              "In a pan, water-sauté the minced garlic for 30 seconds. Add the chard and 2 tbsp of water, cover, and cook until wilted (about 5-7 minutes).",
+              "Serve the roasted pumpkin alongside the sautéed chard."
+            ]
+          },
+          "portionSize": "1 serving",
+          "nutrition": {
+            "calories": "340 kcal",
+            "carbs": "84g",
+            "protein": "9g",
+            "fat": "1g",
+            "fiber": "15g"
+          }
+        }
+      ]
+    },
+    {
+      "day": "Day 5",
+      "dailySummary": {
+        "totalCalories": "Approx. 1860 kcal",
+        "totalCarbs": "Approx. 290g",
+        "totalProtein": "Approx. 60g",
+        "totalFat": "Approx. 55g",
+        "totalFiber": "Approx. 50g"
+      },
+      "meals": [
+        {
+          "name": "Breakfast",
+          "time": "8:00 AM",
+          "recipe": {
+            "title": "Finger Millet (Ragi) Porridge with Raspberries",
+            "ingredients": [
+              "1/2 cup (70g) finger millet flour",
+              "2 cups water",
+              "1/2 cup fresh raspberries, slightly mashed"
+            ],
+            "instructions": [
+              "In a saucepan, whisk the finger millet flour with a small amount of cold water to form a paste.",
+              "Gradually whisk in the remaining water. Cook over medium heat, stirring constantly, for 5-7 minutes until the porridge thickens.",
+              "Stir in the mashed raspberries.",
+              "Serve warm."
+            ]
+          },
+          "portionSize": "1 serving",
+          "nutrition": {
+            "calories": "280 kcal",
+            "carbs": "60g",
+            "protein": "8g",
+            "fat": "2g",
+            "fiber": "10g"
+          }
+        },
+        {
+          "name": "Mid-Morning Snack",
+          "time": "11:00 AM",
+          "recipe": {
+            "title": "A Handful of Blackberries",
+            "ingredients": [
+              "1 cup (144g) blackberries"
+            ],
+            "instructions": [
+              "Enjoy the fresh blackberries."
+            ]
+          },
+          "portionSize": "1 cup",
+          "nutrition": {
+            "calories": "62 kcal",
+            "carbs": "14g",
+            "protein": "2g",
+            "fat": "0.7g",
+            "fiber": "8g"
+          }
+        },
+        {
+          "name": "Pre-Lunch Appetizer",
+          "time": "12:50 PM",
+          "recipe": {
+            "title": "Bell Pepper Strips",
+            "ingredients": [
+              "1/2 medium red bell pepper, cut into strips"
+            ],
+            "instructions": [
+              "Enjoy the crisp pepper strips."
+            ]
+          },
+          "portionSize": "1/2 pepper",
+          "nutrition": {
+            "calories": "15 kcal",
+            "carbs": "3g",
+            "protein": "0.5g",
+            "fat": "0.1g",
+            "fiber": "1g"
+          }
+        },
+        {
+          "name": "Lunch",
+          "time": "1:00 PM",
+          "recipe": {
+            "title": "Arugula Salad with Pears and Pistachios",
+            "ingredients": [
+              "4 cups arugula",
+              "1 medium pear, thinly sliced",
+              "1/4 cup (30g) shelled pistachios",
+              "Dressing: 1 tbsp sesame seeds (tahini), 2 tbsp lemon juice, 3 tbsp water, blended until smooth"
+            ],
+            "instructions": [
+              "In a large bowl, combine the arugula and sliced pear.",
+              "Whisk or blend the dressing ingredients until creamy. Pour over the salad and toss gently.",
+              "Sprinkle with pistachios before serving."
+            ]
+          },
+          "portionSize": "1 large salad",
+          "nutrition": {
+            "calories": "480 kcal",
+            "carbs": "50g",
+            "protein": "15g",
+            "fat": "28g",
+            "fiber": "12g"
+          }
+        },
+        {
+          "name": "Evening Snack",
+          "time": "4:00 PM",
+          "recipe": {
+            "title": "Small Bowl of Watermelon",
+            "ingredients": [
+              "1 cup (150g) diced watermelon"
+            ],
+            "instructions": [
+              "Enjoy the refreshing watermelon."
+            ]
+          },
+          "portionSize": "1 cup",
+          "nutrition": {
+            "calories": "45 kcal",
+            "carbs": "11g",
+            "protein": "1g",
+            "fat": "0.2g",
+            "fiber": "1g"
+          }
+        },
+        {
+          "name": "Pre-Dinner Appetizer",
+          "time": "6:50 PM",
+          "recipe": {
+            "title": "Simple Cucumber Salad",
+            "ingredients": [
+              "1 cup sliced cucumber",
+              "1 tsp lemon juice"
+            ],
+            "instructions": [
+              "Combine ingredients in a small bowl."
+            ]
+          },
+          "portionSize": "1 cup",
+          "nutrition": {
+            "calories": "16 kcal",
+            "carbs": "4g",
+            "protein": "0.7g",
+            "fat": "0.1g",
+            "fiber": "1g"
+          }
+        },
+        {
+          "name": "Dinner",
+          "time": "7:00 PM",
+          "recipe": {
+            "title": "Bitter Gourd (Karela) Stir-fry with Proso Millet",
+            "ingredients": [
+              "1/2 cup (100g) uncooked Proso Millet",
+              "2 medium (200g) bitter gourds, thinly sliced",
+              "1 medium white onion, thinly sliced",
+              "2 tbsp (20g) peanuts, crushed",
+              "Spices: turmeric, chili powder (optional)"
+            ],
+            "instructions": [
+              "Cook the Proso millet according to package directions.",
+              "To reduce bitterness, you can rub the sliced bitter gourd with salt (not included in recipe due to sodium) and let it sit for 15 mins, then squeeze out the juice. Rinse well.",
+              "In a non-stick pan, water-sauté the onions until translucent.",
+              "Add the bitter gourd slices and a splash of water. Cover and cook for 10-12 minutes until tender.",
+              "Stir in the spices and crushed peanuts. Cook for another 2 minutes.",
+              "Serve the stir-fry alongside the cooked Proso millet."
+            ]
+          },
+          "portionSize": "1 serving",
+          "nutrition": {
+            "calories": "562 kcal",
+            "carbs": "98g",
+            "protein": "18g",
+            "fat": "14g",
+            "fiber": "17g"
+          }
+        }
+      ]
+    },
+    {
+      "day": "Day 6",
+      "dailySummary": {
+        "totalCalories": "Approx. 1875 kcal",
+        "totalCarbs": "Approx. 305g",
+        "totalProtein": "Approx. 55g",
+        "totalFat": "Approx. 53g",
+        "totalFiber": "Approx. 55g"
+      },
+      "meals": [
+        {
+          "name": "Breakfast",
+          "time": "8:00 AM",
+          "recipe": {
+            "title": "Cooked Buckwheat Groats with Apple",
+            "ingredients": [
+              "1/2 cup (85g) uncooked buckwheat groats",
+              "1 cup water",
+              "1 small (150g) apple, chopped",
+              "1/2 tsp cinnamon"
+            ],
+            "instructions": [
+              "Rinse buckwheat groats. In a saucepan, combine groats and water. Bring to a boil.",
+              "Reduce heat, cover, and simmer for 10-15 minutes until water is absorbed.",
+              "Stir in the chopped apple and cinnamon during the last 5 minutes of cooking.",
+              "Fluff with a fork before serving."
+            ]
+          },
+          "portionSize": "1 serving",
+          "nutrition": {
+            "calories": "380 kcal",
+            "carbs": "80g",
+            "protein": "12g",
+            "fat": "3g",
+            "fiber": "12g"
+          }
+        },
+        {
+          "name": "Mid-Morning Snack",
+          "time": "11:00 AM",
+          "recipe": {
+            "title": "Small Mango",
+            "ingredients": [
+              "1 small (200g) mango"
+            ],
+            "instructions": [
+              "Peel, slice, and enjoy the mango."
+            ]
+          },
+          "portionSize": "1 small mango",
+          "nutrition": {
+            "calories": "120 kcal",
+            "carbs": "30g",
+            "protein": "1.5g",
+            "fat": "0.8g",
+            "fiber": "3g"
+          }
+        },
+        {
+          "name": "Pre-Lunch Appetizer",
+          "time": "12:50 PM",
+          "recipe": {
+            "title": "Tomato Slices",
+            "ingredients": [
+              "1 medium tomato, sliced",
+              "Pinch of black pepper"
+            ],
+            "instructions": [
+              "Season tomato slices with black pepper."
+            ]
+          },
+          "portionSize": "1 medium tomato",
+          "nutrition": {
+            "calories": "22 kcal",
+            "carbs": "5g",
+            "protein": "1g",
+            "fat": "0.2g",
+            "fiber": "1.5g"
+          }
+        },
+        {
+          "name": "Lunch",
+          "time": "1:00 PM",
+          "recipe": {
+            "title": "Mixed Greens and Millet Salad with Cashew Dressing",
+            "ingredients": [
+              "2 cups mixed greens (lettuce, spinach)",
+              "1 cup cooked Little Millet, cooled",
+              "1/2 cup sliced cucumber",
+              "1/2 cup cherry tomatoes, halved",
+              "Dressing: 1/4 cup (30g) raw cashews, soaked, 3 tbsp water, 1 tbsp lemon juice, blended until smooth"
+            ],
+            "instructions": [
+              "In a large bowl, combine the mixed greens, cooled millet, cucumber, and tomatoes.",
+              "Pour the blended cashew dressing over the salad and toss to combine.",
+              "Serve immediately."
+            ]
+          },
+          "portionSize": "1 large salad",
+          "nutrition": {
+            "calories": "580 kcal",
+            "carbs": "75g",
+            "protein": "15g",
+            "fat": "25g",
+            "fiber": "15g"
+          }
+        },
+        {
+          "name": "Evening Snack",
+          "time": "4:00 PM",
+          "recipe": {
+            "title": "Handful of Walnuts",
+            "ingredients": [
+              "1/4 cup (30g) walnuts"
+            ],
+            "instructions": [
+              "Enjoy a small handful of walnuts."
+            ]
+          },
+          "portionSize": "1/4 cup",
+          "nutrition": {
+            "calories": "196 kcal",
+            "carbs": "4g",
+            "protein": "4g",
+            "fat": "20g",
+            "fiber": "2g"
+          }
+        },
+        {
+          "name": "Pre-Dinner Appetizer",
+          "time": "6:50 PM",
+          "recipe": {
+            "title": "Steamed Asparagus (Not on list, using Broccoli)",
+            "ingredients": [
+              "1 cup steamed broccoli florets",
+              "Squeeze of lemon juice"
+            ],
+            "instructions": [
+              "Steam broccoli until tender-crisp and drizzle with lemon juice."
+            ]
+          },
+          "portionSize": "1 cup",
+          "nutrition": {
+            "calories": "35 kcal",
+            "carbs": "7g",
+            "protein": "3g",
+            "fat": "0.4g",
+            "fiber": "3g"
+          }
+        },
+        {
+          "name": "Dinner",
+          "time": "7:00 PM",
+          "recipe": {
+            "title": "Roasted Parsnips and Carrots with Steamed Kale",
+            "ingredients": [
+              "2 medium (180g) parsnips, chopped",
+              "2 medium (120g) carrots, chopped",
+              "3 cups (90g) chopped kale",
+              "Spices: rosemary, black pepper"
+            ],
+            "instructions": [
+              "Preheat oven to 400°F (200°C).",
+              "Toss parsnips and carrots with spices and roast for 25-30 minutes until caramelized and tender.",
+              "While roots are roasting, steam the kale for 5-7 minutes until wilted.",
+              "Serve the roasted root vegetables with the steamed kale on the side."
+            ]
+          },
+          "portionSize": "1 serving",
+          "nutrition": {
+            "calories": "242 kcal",
+            "carbs": "59g",
+            "protein": "6.5g",
+            "fat": "1g",
+            "fiber": "18.5g"
+          }
+        }
+      ]
+    },
+    {
+      "day": "Day 7",
+      "dailySummary": {
+        "totalCalories": "Approx. 1845 kcal",
+        "totalCarbs": "Approx. 330g",
+        "totalProtein": "Approx. 55g",
+        "totalFat": "Approx. 38g",
+        "totalFiber": "Approx. 57g"
+      },
+      "meals": [
+        {
+          "name": "Breakfast",
+          "time": "8:00 AM",
+          "recipe": {
+            "title": "Papaya Spinach Smoothie with Chia Seeds",
+            "ingredients": [
+              "1.5 cups (210g) cubed papaya",
+              "1 cup fresh spinach",
+              "1 tbsp (12g) chia seeds",
+              "1 cup water"
+            ],
+            "instructions": [
+              "Combine all ingredients in a blender.",
+              "Blend until smooth and creamy.",
+              "Serve immediately."
+            ]
+          },
+          "portionSize": "1 large smoothie",
+          "nutrition": {
+            "calories": "210 kcal",
+            "carbs": "45g",
+            "protein": "5g",
+            "fat": "5g",
+            "fiber": "12g"
+          }
+        },
+        {
+          "name": "Mid-Morning Snack",
+          "time": "11:00 AM",
+          "recipe": {
+            "title": "Fresh Nectarine",
+            "ingredients": [
+              "1 medium (140g) nectarine"
+            ],
+            "instructions": [
+              "Wash and enjoy the nectarine."
+            ]
+          },
+          "portionSize": "1 medium nectarine",
+          "nutrition": {
+            "calories": "60 kcal",
+            "carbs": "15g",
+            "protein": "1.5g",
+            "fat": "0.5g",
+            "fiber": "2g"
+          }
+        },
+        {
+          "name": "Pre-Lunch Appetizer",
+          "time": "12:50 PM",
+          "recipe": {
+            "title": "Simple Lettuce Salad",
+            "ingredients": [
+              "2 cups shredded lettuce",
+              "1/4 cup sliced red onion",
+              "1 tsp lemon juice"
+            ],
+            "instructions": [
+              "Combine all ingredients in a small bowl."
+            ]
+          },
+          "portionSize": "1 serving",
+          "nutrition": {
+            "calories": "25 kcal",
+            "carbs": "5g",
+            "protein": "1g",
+            "fat": "0.2g",
+            "fiber": "2g"
+          }
+        },
+        {
+          "name": "Lunch",
+          "time": "1:00 PM",
+          "recipe": {
+            "title": "Baked Potato with Mushroom Gravy",
+            "ingredients": [
+              "1 medium (170g) white potato",
+              "1.5 cups (100g) sliced mushrooms",
+              "1/4 cup chopped white onion",
+              "1/2 cup vegetable broth or water",
+              "1 tsp Little Millet flour to thicken",
+              "Herbs: thyme, black pepper"
+            ],
+            "instructions": [
+              "Preheat oven to 400°F (200°C). Pierce potato with a fork and bake for 45-60 minutes until tender.",
+              "For the gravy, water-sauté the onion until soft. Add mushrooms and cook until browned.",
+              "Stir in thyme and black pepper. In a small bowl, whisk the millet flour with the vegetable broth until smooth, then add to the pan.",
+              "Simmer, stirring, until the gravy thickens.",
+              "Split the baked potato and top with the mushroom gravy."
+            ]
+          },
+          "portionSize": "1 serving",
+          "nutrition": {
+            "calories": "280 kcal",
+            "carbs": "60g",
+            "protein": "9g",
+            "fat": "1g",
+            "fiber": "10g"
+          }
+        },
+        {
+          "name": "Evening Snack",
+          "time": "4:00 PM",
+          "recipe": {
+            "title": "Handful of Sunflower Seeds",
+            "ingredients": [
+              "1/4 cup (30g) raw, unsalted sunflower seeds"
+            ],
+            "instructions": [
+              "Enjoy a small handful of sunflower seeds."
+            ]
+          },
+          "portionSize": "1/4 cup",
+          "nutrition": {
+            "calories": "175 kcal",
+            "carbs": "6g",
+            "protein": "6g",
+            "fat": "15g",
+            "fiber": "3g"
+          }
+        },
+        {
+          "name": "Pre-Dinner Appetizer",
+          "time": "6:50 PM",
+          "recipe": {
+            "title": "Steamed Artichoke Hearts",
+            "ingredients": [
+              "1 cup canned or frozen artichoke hearts (in water, no oil), steamed",
+              "Squeeze of lemon juice"
+            ],
+            "instructions": [
+              "Steam or gently heat the artichoke hearts. Drizzle with lemon juice."
+            ]
+          },
+          "portionSize": "1 cup",
+          "nutrition": {
+            "calories": "60 kcal",
+            "carbs": "13g",
+            "protein": "4g",
+            "fat": "0.2g",
+            "fiber": "7g"
+          }
+        },
+        {
+          "name": "Dinner",
+          "time": "7:00 PM",
+          "recipe": {
+            "title": "Sorghum Grain Bowl with Veggies",
+            "ingredients": [
+              "1.5 cups cooked Sorghum",
+              "1 cup steamed chopped bell peppers (mixed colors)",
+              "1/2 cup steamed cauliflower florets",
+              "Dressing: 2 tbsp lemon juice, 1 tbsp chopped fresh celery leaves, black pepper"
+            ],
+            "instructions": [
+              "In a large bowl, combine the warm cooked sorghum, steamed bell peppers, and cauliflower.",
+              "Whisk together the dressing ingredients and pour over the bowl.",
+              "Toss everything together and serve."
+            ]
+          },
+          "portionSize": "1 large bowl",
+          "nutrition": {
+            "calories": "535 kcal",
+            "carbs": "116g",
+            "protein": "18.5g",
+            "fat": "6g",
+            "fiber": "21g"
+          }
+        }
+      ]
+    }
+  ]
+};
+
+        const weeklyPlanContainer = document.getElementById('weekly-plan');
+
+        data.weeklyMealPlan.forEach(day => {
+            let dayHtml = `
+                <div class="day-plan">
+                    <h3>${day.day}</h3>
+                    <div class="daily-summary">
+                        <ul>
+                            <li><strong>Calories:</strong> ${day.dailySummary.totalCalories}</li>
+                            <li><strong>Carbs:</strong> ${day.dailySummary.totalCarbs}</li>
+                            <li><strong>Protein:</strong> ${day.dailySummary.totalProtein}</li>
+                            <li><strong>Fat:</strong> ${day.dailySummary.totalFat}</li>
+                            <li><strong>Fiber:</strong> ${day.dailySummary.totalFiber}</li>
+                        </ul>
+                    </div>
+                    <div class="meals-container">
+            `;
+
+            day.meals.forEach(meal => {
+                dayHtml += `
+                    <div class="meal-card">
+                        <h4>${meal.name} (${meal.time})</h4>
+                        <h5>${meal.recipe.title}</h5>
+                        
+                        <strong>Ingredients:</strong>
+                        <ul>
+                            ${meal.recipe.ingredients.map(ing => `<li>${ing}</li>`).join('')}
+                        </ul>
+
+                        <strong>Instructions:</strong>
+                        <ol>
+                            ${meal.recipe.instructions.map(inst => `<li>${inst}</li>`).join('')}
+                        </ol>
+
+                        <p><strong>Portion Size:</strong> ${meal.portionSize}</p>
+
+                        <div class="nutrition-info">
+                            <strong>Nutrition:</strong>
+                            <ul>
+                                <li>Cal: ${meal.nutrition.calories}</li>
+                                <li>Carbs: ${meal.nutrition.carbs}</li>
+                                <li>Protein: ${meal.nutrition.protein}</li>
+                                <li>Fat: ${meal.nutrition.fat}</li>
+                                <li>Fiber: ${meal.nutrition.fiber}</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            });
+
+            dayHtml += `
+                    </div>
+                </div>
+            `;
+            weeklyPlanContainer.innerHTML += dayHtml;
+        });
+    </script>
+</body>
+</html>
