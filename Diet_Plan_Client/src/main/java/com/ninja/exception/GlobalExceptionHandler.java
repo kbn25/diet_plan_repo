@@ -1,24 +1,11 @@
 package com.ninja.exception;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
-import org.postgresql.util.PSQLException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.ninja.dto.DatabaseError;
-import com.ninja.dto.ErrorField;
-import com.ninja.dto.RequestError;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler 
@@ -33,7 +20,6 @@ public class GlobalExceptionHandler
 	public void handleValidationException(MethodArgumentNotValidException invalidException) 
 	{
 		logger.error(HttpStatus.BAD_REQUEST + "\n" + invalidException.getMessage());
-		
 	}
 	
 	
@@ -43,17 +29,11 @@ public class GlobalExceptionHandler
 	 * @return Database error messages
 	 * ConstraintViolationException:
 	 */
-	@ExceptionHandler(PSQLException.class)
-	public void handleValidationException(PSQLException exception)
-	{
-		logger.error(HttpStatus.INTERNAL_SERVER_ERROR + "\n" + exception.getMessage());
-
-	}
-	
 	@ExceptionHandler(Exception.class)
 	public void handleValidationException(Exception exception)
 	{
 		logger.error(exception.getMessage());
 
 	}
+	
 }

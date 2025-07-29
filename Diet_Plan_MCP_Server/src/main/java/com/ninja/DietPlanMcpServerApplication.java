@@ -1,5 +1,7 @@
 package com.ninja;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.ai.tool.method.MethodToolCallbackProvider;
 import org.springframework.boot.SpringApplication;
@@ -14,7 +16,10 @@ import com.ninja.service.MealPlanningService;
 @SpringBootApplication
 public class DietPlanMcpServerApplication {
 
+	private static final Logger logger = LoggerFactory.getLogger(DietPlanMcpServerApplication.class);
+	
 	public static void main(String[] args) {
+		logger.debug("Main Client Application Starting...");
 		SpringApplication.run(DietPlanMcpServerApplication.class, args);
 	}
 
@@ -27,6 +32,7 @@ public class DietPlanMcpServerApplication {
 	 */
 	@Bean
 	public ToolCallbackProvider mealPlanTools(MealPlanningService mealPlanningService, LfvAndLchfBasedDietService lchfBasedDietService) {
+		logger.debug("Registering the tools...");
 		return MethodToolCallbackProvider.builder().toolObjects(mealPlanningService, lchfBasedDietService).build();
 	}
 }

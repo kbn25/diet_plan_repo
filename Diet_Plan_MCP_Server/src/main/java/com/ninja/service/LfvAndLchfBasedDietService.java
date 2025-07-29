@@ -3,6 +3,9 @@ package com.ninja.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.postgresql.util.PSQLException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +27,8 @@ import com.ninja.repository.LfvFoodRepository;
 @Service
 public class LfvAndLchfBasedDietService {
 
+	private static final Logger logger = LoggerFactory.getLogger(LfvAndLchfBasedDietService.class);
+	
 	private final LfvFoodRepository lfvFoodRepository;
 	private final LchfFoodRepository lchfFoodRepository;
 
@@ -73,7 +78,9 @@ public class LfvAndLchfBasedDietService {
 	 * MCP Tool: Get allowed LFV foods
 	 */
 	@Tool(description = "Get all allowed foods for LFV diet (OK and Moderation)")
-	public List<LfvFood> getAllowedLfvFoods() {
+	public List<LfvFood> getAllowedLfvFoods() throws PSQLException {
+		logger.debug("Inside getAllowedLfvFoods.....");
+
 		return lfvFoodRepository.findAllowedFoods();
 	}
 
@@ -133,7 +140,9 @@ public class LfvAndLchfBasedDietService {
 	 * MCP Tool: Get allowed LCHF foods
 	 */
 	@Tool(description = "Get all allowed foods for LCHF diet (OK and Recommended)")
-	public List<LchfFood> getAllowedLchfFoods() {
+	public List<LchfFood> getAllowedLchfFoods()  throws PSQLException{
+		logger.debug("Inside getAllowedLchfFoods.....");
+
 		return lchfFoodRepository.findAllowedFoods();
 	}
 
@@ -205,7 +214,7 @@ public class LfvAndLchfBasedDietService {
 		return lfvFoodRepository.findByCategoryIgnoreCase(category, pageable);
 	}
 
-	public Page<LfvFood> getLfvFoodsByLimitationPaginated(String limitation, int page, int size) {
+	public Page<LfvFood> getLfvFoodsByLimitationPaginated(String limitation, int page, int size) throws PSQLException {
 		Pageable pageable = PageRequest.of(page, size);
 		return lfvFoodRepository.findByLimitationIgnoreCase(limitation, pageable);
 	}

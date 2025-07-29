@@ -1,5 +1,6 @@
 package com.ninja.repository;
 
+import org.postgresql.util.PSQLException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -31,7 +32,7 @@ public interface LfvFoodRepository extends JpaRepository<LfvFood, Long> {
 
     // Find allowed foods (OK and Moderation)
     @Query("SELECT l FROM LfvFood l WHERE UPPER(l.limitation) IN ('OK', 'MODERATION')")
-    List<LfvFood> findAllowedFoods();
+    List<LfvFood> findAllowedFoods() throws PSQLException;
 
     // Find restricted foods
     @Query("SELECT l FROM LfvFood l WHERE UPPER(l.limitation) IN ('Restricted', 'Limited')")
