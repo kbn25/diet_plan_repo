@@ -1,6 +1,8 @@
 package com.ninja.controller;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,5 +27,19 @@ public class ChatController {
 		return chatServiceImpl.getChatResponse(query);
 	}
 	
+	@GetMapping("/generateMealPlan")
+	public  ResponseEntity<?> generateMealPlan(			
+			@RequestParam(defaultValue = "40") int age,
+			@RequestParam(defaultValue = "20.0") float bmi,
+			@RequestParam(defaultValue = "LCHF") String dietType,
+			@RequestParam(defaultValue = "Type 2") String diabeticType,
+			@RequestParam(defaultValue = "Indian") String cusineType,
+			@RequestParam (defaultValue="Dairy") String allergens,
+			@RequestParam String otherFoodRestrictions,
+			@RequestParam String otherMedicalConditions) throws JsonMappingException, JsonProcessingException
+	{
+	
+		return chatServiceImpl.getSevenDayMealPlan(age,bmi,dietType,diabeticType,cusineType,allergens,otherFoodRestrictions,otherMedicalConditions);
+	}
 
 }

@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import com.ninja.entity.LchfFood;
@@ -105,7 +107,22 @@ public class LfvAndLchfBasedDietService {
 		}
 		return lchfFoodRepository.findByNameContainingIgnoreCase(searchTerm.trim());
 	}
+	
+	/**
+	 * MCP Tool: Search both food and lchf table and exclude the allergies
+	 */
+	
+	@Tool(description="Find Foods Suitable for LCHF Diet Excluding Allergies")
+	public List<String>  findFoodsForLCHFExcludingAllergies(@ToolParam (description="comma seperated allergies") String allergens)
+	{
 
+	    // 1. Get the filtered food list
+		System.out.println("Allergies" + allergens);
+	    List<String> foods = lchfFoodRepository.findFoodsforLChfExcludingAllergens(allergens);
+	    System.out.println(foods.toString());
+	    return foods;
+	}	
+	
 	/**
 	 * MCP Tool: Get LCHF foods by category
 	 */

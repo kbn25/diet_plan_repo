@@ -78,5 +78,20 @@ public interface LchfFoodRepository extends JpaRepository<LchfFood, Long> {
     Page<LchfFood> findByMultipleCriteria(@Param("name") String name, 
                                          @Param("category") String category, 
                                          @Param("limitation") String limitation, 
-                                         Pageable pageable);
+                                         Pageable pageable);   
+    
+    //Compare the lchf & food table and exclude the allergic foods
+   
+	  @Query(value = """
+	    	    SELECT distinct(l.name)
+	    	    FROM foods f
+	    	    JOIN lchf_tbl l ON LOWER(f.food_name) LIKE CONCAT('%', LOWER(l.name), '%')
+	    	    WHERE LOWER(l.limitation) IN ('ok', 'limited')
+	    	      AND NOT EXISTS (
+	    	        SELECT 1
+	    	        FROM unnest(string_to_array(:allergens, ',')) AS a(allergen_item)
+	    	        WHERE LOWER(f.allergen_flags) LIKE CONCAT('%', LOWER(TRIM(a.allergen_item)), '%')
+	    	      	) LIMIT 30
+	    	    """, nativeQuery = true) 
+	        List<String> findFoodsforLChfExcludingAllergens(@Param("allergens") String allergens);
 }

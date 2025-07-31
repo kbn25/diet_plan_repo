@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Day Meal Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            color: #2980b9;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .header-info {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            border-left: 5px solid #2980b9;
+        }
+        .header-info h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .day-plan {
+            border: 1px solid #ddd;
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+        .day-header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin: -20px -20px 20px -20px;
+            border-radius: 8px 8px 0 0;
+        }
+        .daily-summary {
+            background-color: #eaf5ff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #3498db;
+        }
+        .daily-summary h3 {
+             margin-top: 0;
+             color: #2980b9;
+        }
+        .meal-category {
+            margin-bottom: 20px;
+        }
+        .meal-category h4 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            color: #2980b9;
+            font-size: 1.4em;
+            margin-top: 0;
+        }
+        .meal-details {
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        .meal-name {
+            font-weight: bold;
+            font-size: 1.25em;
+            color: #34495e;
+        }
+        .meal-time {
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        .nutrition-info, .portion-info {
+            font-size: 0.95em;
+            color: #555;
+            margin: 8px 0;
+        }
+        .recipe {
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 3px solid #bdc3c7;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>7-Day Meal Plan</h1>
+
+        <div class="header-info">
+            <h2>Dietary Information</h2>
+            <p><strong>Allowed Foods:</strong> Almonds, Artichoke, Arugula, Broccoli, Cabbage, Cauliflower, Chard, Eggplant, Eggs, Fish, Garlic, Ginger, Hazelnuts, Kale, Lettuce, Macadamia nuts, Meat, Mushrooms, Onion, Pecans, Pine nuts, Poultry, Sesame seeds, Spinach, Strawberry, Tomatoes, Walnuts</p>
+            <p><strong>Food Restrictions:</strong> Greens</p>
+            <p><strong>Allergens:</strong> Dairy</p>
+        </div>
+
+        
+        <div class="day-plan">
+            <div class="day-header">Day 1</div>
+            <div class="daily-summary">
+                <h3>Daily Summary</h3>
+                <strong>Total Calories:</strong> 1502 kcal<br>
+                <strong>Nutrition:</strong> 29g Net Carbs | 105g Protein | 106g Fat | 13g Fiber
+            </div>
+
+            <div class="meal-category">
+                <h4>Pre-Meal Appetizer</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Tomato and Walnut Salad</span> <span class="meal-time">(12:45 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 120 kcal, 3g Net Carbs, 3g Protein, 11g Fat, 2g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Dice one medium tomato. 2. Roughly chop 15g of walnuts. 3. Combine and season with a pinch of salt and black pepper.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Breakfast</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Masala Scrambled Eggs (Anda Bhurji)</span> <span class="meal-time">(8:00 AM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 3 eggs</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 385 kcal, 6g Net Carbs, 20g Protein, 31g Fat, 1g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Heat 1 tbsp of sesame oil in a pan. 2. Sauté 1/4 finely chopped onion, 1 tsp minced ginger, and 1 tsp minced garlic until fragrant. 3. Add 1/2 chopped tomato and cook until soft. 4. Add 1/2 tsp turmeric powder, 1/2 tsp red chili powder, and salt. 5. Whisk 3 large eggs and pour into the pan. 6. Scramble until cooked to your liking.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Lunch</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Spiced Pan-Seared Fish with Broccoli</span> <span class="meal-time">(1:00 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 150g fish fillet, 150g broccoli</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 402 kcal, 5g Net Carbs, 40g Protein, 24g Fat, 5g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Marinate a 150g fillet of fish (e.g., salmon or cod) with 1 tsp ginger-garlic paste, 1/2 tsp turmeric, 1/2 tsp garam masala, and salt. 2. Heat 1 tbsp of sesame oil in a pan and sear the fish for 3-4 minutes per side until cooked through. 3. In a separate pot, steam 150g of broccoli florets until tender-crisp.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Dinner</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Chicken and Cauliflower Korma</span> <span class="meal-time">(7:30 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 455 kcal, 10g Net Carbs, 36g Protein, 30g Fat, 5g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Blend 30g of macadamia nuts with 1/4 cup of water to make a cream. 2. Heat 1 tbsp sesame oil. Sauté 1/4 chopped onion, 1 tsp ginger-garlic paste. 3. Add 150g of diced poultry (chicken thigh) and brown it. 4. Stir in spices: 1/2 tsp coriander powder, 1/2 tsp cumin powder, 1/4 tsp turmeric, and salt. 5. Add 1/2 cup chopped tomatoes and cook until pulpy. 6. Add 150g cauliflower florets and the nut cream. Simmer for 10-15 minutes until chicken is cooked and gravy has thickened.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Snack</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Strawberries</span> <span class="meal-time">(4:00 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 100g</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 140 kcal, 5g Net Carbs, 6g Protein, 11g Fat, 0g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> Enjoy a bowl of fresh strawberries.</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="day-plan">
+            <div class="day-header">Day 2</div>
+            <div class="daily-summary">
+                <h3>Daily Summary</h3>
+                <strong>Total Calories:</strong> 1515 kcal<br>
+                <strong>Nutrition:</strong> 26g Net Carbs | 98g Protein | 113g Fat | 12g Fiber
+            </div>
+
+            <div class="meal-category">
+                <h4>Pre-Meal Appetizer</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Roasted Almonds</span> <span class="meal-time">(12:45 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 15g</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 87 kcal, 1g Net Carbs, 3g Protein, 8g Fat, 2g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Lightly toast 15g of almonds in a dry pan until fragrant.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Breakfast</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Spiced Poultry Patties</span> <span class="meal-time">(8:00 AM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 2 patties</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 350 kcal, 1g Net Carbs, 32g Protein, 24g Fat, 0g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Mix 150g of minced poultry (chicken) with 1/2 tsp ginger paste, 1/2 tsp garlic paste, 1/4 tsp garam masala, and salt. 2. Form into two small patties. 3. Pan-fry in 1 tbsp of sesame oil until cooked through and golden brown.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Lunch</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Meat (Lamb) and Cabbage Bhaji</span> <span class="meal-time">(1:00 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 488 kcal, 8g Net Carbs, 35g Protein, 36g Fat, 4g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Heat 1 tbsp sesame oil. Sauté 1/4 chopped onion. 2. Add 150g of cubed meat (lamb) and brown on all sides. 3. Add 1 tsp ginger-garlic paste, 1/2 tsp turmeric, 1 tsp coriander powder, and salt. 4. Add 1/4 cup water, cover, and cook until the meat is tender (approx. 30-40 mins). 5. Add 150g of shredded cabbage and cook for another 5-7 minutes until cabbage is tender.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Dinner</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Mushroom Masala Curry</span> <span class="meal-time">(7:30 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 420 kcal, 11g Net Carbs, 13g Protein, 36g Fat, 4g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Make a paste of 1 large tomato and 20g of walnuts. 2. Heat 1.5 tbsp of sesame oil. Sauté 1/4 chopped onion until golden. 3. Add 1 tsp ginger-garlic paste and cook for a minute. 4. Add the tomato-walnut paste, 1/2 tsp turmeric, 1 tsp red chili powder, and salt. Cook until oil separates. 5. Add 200g of sliced mushrooms and 1/2 cup of water. Simmer for 10 minutes.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Snack</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Hard-Boiled Egg</span> <span class="meal-time">(4:00 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 1 large egg</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 170 kcal, 5g Net Carbs, 15g Protein, 9g Fat, 2g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Boil one large egg for 10 minutes. 2. Peel and season with salt and pepper.</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="day-plan">
+            <div class="day-header">Day 3</div>
+            <div class="daily-summary">
+                <h3>Daily Summary</h3>
+                <strong>Total Calories:</strong> 1493 kcal<br>
+                <strong>Nutrition:</strong> 31g Net Carbs | 92g Protein | 111g Fat | 18g Fiber
+            </div>
+
+            <div class="meal-category">
+                <h4>Pre-Meal Appetizer</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Sliced Tomatoes with Sesame Seeds</span> <span class="meal-time">(12:45 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 1 medium tomato</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 40 kcal, 3g Net Carbs, 2g Protein, 2g Fat, 1g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Slice one medium tomato. 2. Sprinkle with 1 tsp of toasted sesame seeds, salt, and pepper.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Breakfast</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Mushroom and Onion Omelette</span> <span class="meal-time">(8:00 AM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 3-egg omelette</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 395 kcal, 5g Net Carbs, 22g Protein, 32g Fat, 1g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Sauté 50g sliced mushrooms and 1/4 chopped onion in 1 tbsp of sesame oil until soft. 2. Whisk 3 large eggs with salt and pepper. 3. Pour eggs over the vegetables and cook until set.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Lunch</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Fish Curry with Almond Cream</span> <span class="meal-time">(1:00 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 438 kcal, 7g Net Carbs, 33g Protein, 31g Fat, 3g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Blend 20g almonds with water to make a paste. 2. Heat 1 tbsp sesame oil, sauté 1/4 onion, 1 tsp ginger-garlic paste. 3. Add 1/2 chopped tomato, 1/2 tsp turmeric, 1/2 tsp cumin powder. Cook until soft. 4. Add the almond paste and 1/2 cup water. Simmer for 5 mins. 5. Gently add 150g of firm white fish chunks (like cod) and cook for 5-7 minutes until fish is opaque.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Dinner</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Stuffed Eggplant (Bharwa Baingan)</span> <span class="meal-time">(7:30 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 2 stuffed eggplants</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 450 kcal, 12g Net Carbs, 29g Protein, 35g Fat, 11g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Slit 2 medium eggplants (total 250g). 2. Mix 2 tbsp powdered pecans, 1 tsp ginger-garlic paste, 1 tsp coriander powder, 1/2 tsp turmeric, salt, and 1 tbsp sesame oil into a paste. 3. Stuff this paste into the eggplants. 4. In a pan, heat 1.5 tbsp sesame oil and place the stuffed eggplants. 5. Add 1/4 cup water, cover, and cook on low heat for 20-25 minutes, turning occasionally, until eggplant is tender.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Snack</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Handful of Walnuts</span> <span class="meal-time">(4:00 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 20g</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 170 kcal, 4g Net Carbs, 6g Protein, 11g Fat, 2g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> A handful of raw walnuts.</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="day-plan">
+            <div class="day-header">Day 4</div>
+            <div class="daily-summary">
+                <h3>Daily Summary</h3>
+                <strong>Total Calories:</strong> 1523 kcal<br>
+                <strong>Nutrition:</strong> 30g Net Carbs | 102g Protein | 111g Fat | 14g Fiber
+            </div>
+
+            <div class="meal-category">
+                <h4>Pre-Meal Appetizer</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Artichoke Hearts in Oil</span> <span class="meal-time">(12:45 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 50g</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 50 kcal, 2g Net Carbs, 1g Protein, 4g Fat, 3g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Take 50g of canned artichoke hearts (in oil, drained). 2. Season with a pinch of black pepper.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Breakfast</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Meat Keema with Eggs</span> <span class="meal-time">(8:00 AM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 480 kcal, 7g Net Carbs, 35g Protein, 35g Fat, 2g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Heat 1 tbsp sesame oil. Sauté 1/4 chopped onion, 1 tsp ginger-garlic paste. 2. Add 100g minced meat (lamb/goat) and cook until browned. 3. Add 1/2 chopped tomato, 1/2 tsp turmeric, 1/2 tsp garam masala, and salt. Cook for 10 mins. 4. Create two wells in the keema and crack two large eggs into them. 5. Cover and cook until eggs are set to your liking.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Lunch</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Poultry (Chicken) Tikka Skewers</span> <span class="meal-time">(1:00 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 2 skewers</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 353 kcal, 6g Net Carbs, 38g Protein, 19g Fat, 2g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Cube 150g of poultry (chicken breast). Marinate in 1 tbsp sesame oil, 1 tsp ginger-garlic paste, 1 tsp tandoori masala (or mix of cumin, coriander, chili powder), and salt for 30 mins. 2. Thread chicken onto skewers, alternating with chunks of onion and tomato. 3. Grill or pan-sear until cooked through.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Dinner</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Cauliflower 'Rice' with Sautéed Mushrooms</span> <span class="meal-time">(7:30 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 1 large bowl</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 470 kcal, 12g Net Carbs, 22g Protein, 38g Fat, 7g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Grate 200g of cauliflower to a 'rice' consistency. 2. Heat 1 tbsp sesame oil. Sauté 1/2 tsp cumin seeds, 1/4 chopped onion. 3. Add 100g sliced mushrooms and cook until browned. 4. Add the cauliflower 'rice', 1/2 tsp turmeric, and salt. Stir-fry for 5-7 minutes until tender. 5. Garnish with 15g toasted pine nuts.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Snack</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Macadamia Nuts</span> <span class="meal-time">(4:00 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 20g</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 170 kcal, 3g Net Carbs, 6g Protein, 15g Fat, 0g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> A small handful of raw macadamia nuts.</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="day-plan">
+            <div class="day-header">Day 5</div>
+            <div class="daily-summary">
+                <h3>Daily Summary</h3>
+                <strong>Total Calories:</strong> 1498 kcal<br>
+                <strong>Nutrition:</strong> 28g Net Carbs | 95g Protein | 112g Fat | 15g Fiber
+            </div>
+
+            <div class="meal-category">
+                <h4>Pre-Meal Appetizer</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Strawberry Slices</span> <span class="meal-time">(12:45 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 50g</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 16 kcal, 3g Net Carbs, 0g Protein, 0g Fat, 1g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Slice 50g of fresh strawberries.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Breakfast</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Fried Eggs with Sautéed Tomatoes</span> <span class="meal-time">(8:00 AM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 2 large eggs, 1 tomato</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 320 kcal, 6g Net Carbs, 14g Protein, 27g Fat, 2g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Heat 1 tbsp of sesame oil in a pan. 2. Add 1 sliced tomato and sauté until soft. 3. Push tomatoes to one side and fry 2 large eggs in the same pan until the whites are set and yolks are runny.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Lunch</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Baked Fish with Garlic and Herbs</span> <span class="meal-time">(1:00 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 150g fish, 100g broccoli</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 482 kcal, 5g Net Carbs, 36g Protein, 36g Fat, 4g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Preheat oven to 200°C (400°F). 2. Place a 150g fish fillet (e.g., mackerel) on a piece of parchment paper. 3. Top with 2 cloves of minced garlic, 1 tbsp of sesame oil, salt, and pepper. 4. Fold the parchment to create a packet and bake for 15-20 minutes. 5. Serve with a side of 100g steamed broccoli.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Dinner</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Spicy Cabbage with Minced Poultry</span> <span class="meal-time">(7:30 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 510 kcal, 10g Net Carbs, 39g Protein, 35g Fat, 6g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Heat 1.5 tbsp sesame oil. Sauté 1/4 chopped onion and 1 tsp ginger-garlic paste. 2. Add 150g of minced poultry (chicken) and cook until browned. 3. Add spices: 1/2 tsp turmeric, 1 tsp chili powder, 1 tsp coriander powder. 4. Add 200g of shredded cabbage and salt. Stir-fry on high heat for 5-7 minutes until cabbage is cooked but still has a slight crunch.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Snack</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Pecans</span> <span class="meal-time">(4:00 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 20g</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 170 kcal, 4g Net Carbs, 6g Protein, 14g Fat, 2g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> A small handful of raw pecans.</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="day-plan">
+            <div class="day-header">Day 6</div>
+            <div class="daily-summary">
+                <h3>Daily Summary</h3>
+                <strong>Total Calories:</strong> 1512 kcal<br>
+                <strong>Nutrition:</strong> 25g Net Carbs | 108g Protein | 108g Fat | 11g Fiber
+            </div>
+
+            <div class="meal-category">
+                <h4>Pre-Meal Appetizer</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Simple Tomato Soup Shot</span> <span class="meal-time">(12:45 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 1 small cup (~100ml)</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 15 kcal, 2g Net Carbs, 1g Protein, 0g Fat, 1g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Blend 1/2 a large tomato with 2-3 tbsp of hot water, a pinch of salt, and black pepper until smooth. 2. Serve warm in a small cup.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Breakfast</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Scrambled Eggs with Onions</span> <span class="meal-time">(8:00 AM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 3 eggs</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 375 kcal, 4g Net Carbs, 20g Protein, 31g Fat, 1g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Heat 1 tbsp sesame oil. Sauté 1/4 finely chopped onion until soft. 2. Whisk 3 large eggs with salt and pepper, add to the pan, and scramble until cooked.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Lunch</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Meat (Lamb) Seekh Kebabs</span> <span class="meal-time">(1:00 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 2 large kebabs</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 482 kcal, 6g Net Carbs, 38g Protein, 34g Fat, 3g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Mix 150g minced meat (lamb) with 1 tsp ginger-garlic paste, 1/4 chopped onion, 1/2 tsp garam masala, salt, and 1/2 tsp chili powder. 2. Form the mixture around skewers. 3. Pan-fry with 1 tbsp sesame oil or grill until cooked through. Serve with a side of 100g steamed cauliflower.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Dinner</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Poultry and Broccoli Stir-fry</span> <span class="meal-time">(7:30 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 470 kcal, 9g Net Carbs, 43g Protein, 29g Fat, 5g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Cut 150g poultry (chicken breast) into strips. 2. Heat 1.5 tbsp sesame oil in a wok. Add 1 tsp minced ginger and 1 tsp minced garlic. 3. Add the chicken and stir-fry until almost cooked. 4. Add 150g of broccoli florets and stir-fry for 4-5 minutes. 5. Add 1 tbsp of water, salt, and pepper. Cover and steam for 2 minutes until broccoli is tender-crisp.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Snack</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Toasted Sesame Seeds</span> <span class="meal-time">(4:00 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 2 tbsp (18g)</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 170 kcal, 4g Net Carbs, 6g Protein, 14g Fat, 1g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> Toast 2 tablespoons of sesame seeds in a dry pan until lightly golden and fragrant. Eat as is or with a pinch of salt.</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="day-plan">
+            <div class="day-header">Day 7</div>
+            <div class="daily-summary">
+                <h3>Daily Summary</h3>
+                <strong>Total Calories:</strong> 1506 kcal<br>
+                <strong>Nutrition:</strong> 29g Net Carbs | 99g Protein | 110g Fat | 16g Fiber
+            </div>
+
+            <div class="meal-category">
+                <h4>Pre-Meal Appetizer</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Walnuts and Strawberries</span> <span class="meal-time">(12:45 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 1 small bowl</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 75 kcal, 2g Net Carbs, 2g Protein, 7g Fat, 2g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. A small mix of 10g walnuts and 30g sliced strawberries.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Breakfast</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Cauliflower Upma with Nuts</span> <span class="meal-time">(8:00 AM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 1 bowl</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 356 kcal, 9g Net Carbs, 10g Protein, 31g Fat, 6g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Grate 150g of cauliflower. 2. Heat 1.5 tbsp sesame oil. Sauté 1/4 chopped onion, 1 tsp ginger. 3. Add the grated cauliflower, 1/2 tsp turmeric, and salt. Cook for 5-7 minutes. 4. Stir in 20g of crushed almonds for crunch.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Lunch</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Pan-Seared Fish with Tomato-Onion Masala</span> <span class="meal-time">(1:00 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 150g fish fillet</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 380 kcal, 6g Net Carbs, 36g Protein, 23g Fat, 2g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Pan-sear a 150g fillet of fish (like cod) in 1 tbsp of sesame oil until cooked. Set aside. 2. In the same pan, add 1/4 chopped onion and 1/2 chopped tomato. Sauté until soft. 3. Add 1/2 tsp ginger-garlic paste, 1/2 tsp cumin powder, and salt. Cook for 2 minutes. 4. Pour the masala over the seared fish.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Dinner</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Meat (Mutton) Stew with Vegetables</span> <span class="meal-time">(7:30 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 1 large bowl</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 525 kcal, 9g Net Carbs, 45g Protein, 35g Fat, 6g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. In a pressure cooker or pot, heat 1 tbsp sesame oil. Brown 150g of cubed meat (mutton/goat). 2. Add 1/2 chopped onion, 1 chopped tomato, 1 tsp ginger-garlic paste, 1/2 tsp turmeric, 1 tsp garam masala, and salt. Sauté for 5 minutes. 3. Add 1.5 cups of water. Pressure cook until meat is tender (approx. 20-25 mins). 4. Add 100g of chopped eggplant and 100g of chopped cabbage. Simmer for another 10 minutes until vegetables are cooked.</div>
+                </div>
+            </div>
+            <div class="meal-category">
+                <h4>Snack</h4>
+                <div class="meal-details">
+                    <span class="meal-name">Two Hard-Boiled Eggs</span> <span class="meal-time">(4:00 PM)</span>
+                    <div class="portion-info"><strong>Portion:</strong> 2 large eggs</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 170 kcal, 3g Net Carbs, 6g Protein, 14g Fat, 0g Fiber</div>
+                    <div class="recipe"><strong>Recipe:</strong> 1. Boil two large eggs for 10 minutes. 2. Peel and season with salt and pepper.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

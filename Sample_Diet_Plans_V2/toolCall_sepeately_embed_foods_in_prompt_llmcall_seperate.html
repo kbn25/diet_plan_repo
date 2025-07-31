@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Day Meal Plan</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fdfdfd;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #16a085;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .header-info {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            border-left: 5px solid #16a085;
+        }
+        .header-info h2 {
+            margin-top: 0;
+            color: #16a085;
+        }
+        .header-info p {
+            margin-bottom: 5px;
+        }
+        .day-plan {
+            border: 1px solid #ddd;
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+        .day-header {
+            background-color: #1abc9c;
+            color: white;
+            padding: 15px;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin: -20px -20px 20px -20px;
+            border-radius: 8px 8px 0 0;
+        }
+        .daily-totals {
+            background-color: #eafaf1;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #16a085;
+        }
+        .daily-totals strong {
+            color: #16a085;
+        }
+        .meal-category h3 {
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 8px;
+            margin-top: 25px;
+            color: #16a085;
+        }
+        .meal {
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            transition: box-shadow 0.3s ease;
+        }
+        .meal:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .meal-name {
+            font-weight: bold;
+            font-size: 1.25em;
+            color: #34495e;
+        }
+        .meal-time {
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        .nutrition-info {
+            font-size: 0.9em;
+            color: #555;
+            margin: 8px 0;
+        }
+        .recipe {
+            margin-top: 8px;
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>7-Day Meal Plan</h1>
+
+        <div class="header-info">
+            <h2>Allowed Foods</h2>
+            <p>Almonds, Artichoke, Arugula, Broccoli, Cabbage, Cauliflower, Chard, Eggplant, Eggs, Fish, Garlic, Ginger, Hazelnuts, Kale, Lettuce, Macadamia nuts, Meat, Mushrooms, Onion, Pecans, Pine nuts, Poultry, Sesame seeds, Spinach, Strawberry, Tomatoes, Walnuts</p>
+            <h2>Allergies</h2>
+            <p><strong>Gluten, Dairy</strong></p>
+        </div>
+
+        
+        <div class="day-plan">
+            <div class="day-header">Day 1</div>
+            <div class="daily-totals">
+                <strong>Daily Totals:</strong> Calories: 1546 kcal | Carbohydrates: 49.6g | Protein: 93.1g | Fat: 111.4g | Fiber: 18.8g
+            </div>
+
+            <div class="meal-category">
+                <h3>Pre-Meal Appetizers</h3>
+                <div class="meal">
+                    <div class="meal-name">Pre-Lunch Arugula Tomato Salad <span class="meal-time">(12:45 PM)</span></div>
+                    <div><strong>Portion:</strong> 1 bowl</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 49 kcal, Carbs: 3.7g, Protein: 1.7g, Fat: 3.3g, Fiber: 1.3g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Combine 1 cup of arugula, 1/2 chopped medium tomato, and 5g of crushed walnuts. Dress with a squeeze of lemon juice, salt, and pepper.</div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Pre-Dinner Lettuce Salad <span class="meal-time">(06:45 PM)</span></div>
+                    <div><strong>Portion:</strong> 1 small bowl</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 25 kcal, Carbs: 2.3g, Protein: 1.0g, Fat: 1.6g, Fiber: 1.1g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Toss 1 cup of shredded lettuce with 1 tsp of toasted sesame seeds. Season with salt and pepper.</div>
+                </div>
+            </div>
+
+            <div class="meal-category">
+                <h3>Main Meals</h3>
+                <div class="meal">
+                    <div class="meal-name">Breakfast: Palak Anda Bhurji (Spinach Scrambled Eggs) <span class="meal-time">(08:00 AM)</span></div>
+                    <div><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 282 kcal, Carbs: 3.5g, Protein: 13.3g, Fat: 24.0g, Fiber: 1.1g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Heat 1 tbsp of ghee in a pan. Sauté 1/4 chopped onion and 1 minced garlic clove. Add 1 cup of chopped spinach and cook until wilted. Pour in 2 whisked eggs, season with salt and turmeric, and scramble until cooked. Serve hot.</div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Lunch: Pan-Seared Masala Fish with Cabbage Stir-fry <span class="meal-time">(01:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 1 fillet and 1 cup of cabbage</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 452 kcal, Carbs: 10.0g, Protein: 31.8g, Fat: 32.1g, Fiber: 3.5g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Marinate a 150g fish fillet (Kingfish) with ginger-garlic paste, turmeric, and salt. Pan-sear in 1/2 tbsp of ghee until cooked. In another pan, heat 1/2 tbsp ghee, splutter mustard seeds (from sesame seeds family, assumed allowed), add 1.5 cups of shredded cabbage, turmeric, and salt. Stir-fry until tender.</div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Dinner: Keema Baingan Bharta (Minced Lamb with Eggplant Mash) <span class="meal-time">(07:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 1.5 cups</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 587 kcal, Carbs: 25.0g, Protein: 41.5g, Fat: 36.5g, Fiber: 9.5g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Roast 1 large eggplant over a flame until skin is charred. Cool, peel, and mash. In a pan, heat 1 tbsp ghee, sauté 1/2 chopped onion, ginger-garlic paste. Add 150g minced lamb and cook until browned. Add 1 chopped tomato, spices (turmeric, cumin, coriander powder), and the mashed eggplant. Cook for 10-15 minutes.</div>
+                </div>
+            </div>
+
+            <div class="meal-category">
+                <h3>Snacks</h3>
+                <div class="meal">
+                    <div class="meal-name">Mixed Nuts <span class="meal-time">(04:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 22g</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 151 kcal, Carbs: 5.1g, Protein: 4.8g, Fat: 13.9g, Fiber: 2.3g</div>
+                    <div class="recipe"><strong>Recipe:</strong> A mix of 10 almonds (12g) and 5 walnut halves (10g).</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="day-plan">
+            <div class="day-header">Day 2</div>
+            <div class="daily-totals">
+                <strong>Daily Totals:</strong> Calories: 1608 kcal | Carbohydrates: 44.9g | Protein: 105.1g | Fat: 115.6g | Fiber: 16.1g
+            </div>
+
+            <div class="meal-category">
+                <h3>Pre-Meal Appetizers</h3>
+                <div class="meal">
+                    <div class="meal-name">Pre-Lunch Simple Salad <span class="meal-time">(12:45 PM)</span></div>
+                    <div><strong>Portion:</strong> 1 bowl</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 20 kcal, Carbs: 3.2g, Protein: 1.0g, Fat: 0.3g, Fiber: 1.4g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Combine 1 cup of chopped lettuce and 1/4 sliced tomato. Season with salt and pepper.</div>
+                </div>
+            </div>
+
+            <div class="meal-category">
+                <h3>Main Meals</h3>
+                <div class="meal">
+                    <div class="meal-name">Breakfast: Mushroom Masala Omelette <span class="meal-time">(08:00 AM)</span></div>
+                    <div><strong>Portion:</strong> 1 omelette</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 305 kcal, Carbs: 6.2g, Protein: 15.1g, Fat: 25.0g, Fiber: 1.5g</div>
+                    <div class="recipe"><strong>Recipe:</strong> In 1 tbsp ghee, sauté 1/4 chopped onion and 1/2 cup sliced mushrooms until soft. Add turmeric and a pinch of red chili powder. Pour over 2 whisked eggs, season with salt, and cook like an omelette.</div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Lunch: Lamb Chops with Masala Broccoli <span class="meal-time">(01:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 2 chops and 1 cup broccoli</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 520 kcal, Carbs: 8.5g, Protein: 40.0g, Fat: 36.0g, Fiber: 3.5g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Marinate 2 lamb chops (total 150g meat) in ginger-garlic paste, garam masala, and salt. Pan-sear in 1 tbsp ghee until cooked. Steam 1 cup of broccoli florets. In the same pan, toss the steamed broccoli with a pinch of turmeric and salt.</div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Dinner: Tandoori-Style Fish with Cauliflower Rice <span class="meal-time">(07:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 488 kcal, Carbs: 15.0g, Protein: 41.0g, Fat: 30.3g, Fiber: 7.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Marinate 150g fish chunks in a paste of ginger, garlic, tomato paste, and tandoori masala spices. Bake or pan-fry until cooked. For cauliflower rice, grate 1.5 cups of cauliflower florets. Sauté in 1 tbsp ghee with cumin seeds and salt until tender.</div>
+                </div>
+            </div>
+
+            <div class="meal-category">
+                <h3>Snacks</h3>
+                <div class="meal">
+                    <div class="meal-name">Strawberries and Pecans <span class="meal-time">(04:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 275 kcal, Carbs: 12.0g, Protein: 8.0g, Fat: 24.0g, Fiber: 2.7g</div>
+                    <div class="recipe"><strong>Recipe:</strong> A bowl of 1/2 cup sliced strawberries (72g) with 25g of pecans.</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="day-plan">
+            <div class="day-header">Day 3</div>
+            <div class="daily-totals">
+                <strong>Daily Totals:</strong> Calories: 1588 kcal | Carbohydrates: 41.6g | Protein: 98.9g | Fat: 116.8g | Fiber: 15.2g
+            </div>
+
+            <div class="meal-category">
+                <h3>Pre-Meal Appetizers</h3>
+                <div class="meal">
+                    <div class="meal-name">Pre-Dinner Arugula Salad <span class="meal-time">(06:45 PM)</span></div>
+                    <div><strong>Portion:</strong> 1 bowl</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 45 kcal, Carbs: 2.8g, Protein: 1.5g, Fat: 3.5g, Fiber: 1.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Toss 1.5 cups of arugula with 5g of crushed hazelnuts and a simple lemon vinaigrette.</div>
+                </div>
+            </div>
+
+            <div class="meal-category">
+                <h3>Main Meals</h3>
+                <div class="meal">
+                    <div class="meal-name">Breakfast: Indian-Style Shakshuka <span class="meal-time">(08:30 AM)</span></div>
+                    <div><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 320 kcal, Carbs: 12.0g, Protein: 14.5g, Fat: 25.0g, Fiber: 3.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Heat 1 tbsp ghee. Sauté 1/2 chopped onion, garlic, and ginger. Add 1 large chopped tomato, turmeric, cumin powder, and salt. Cook into a thick gravy. Make two wells and crack 2 eggs into them. Cover and cook until eggs are set.</div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Lunch: Palak Fish (Spinach Fish Curry) <span class="meal-time">(01:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 1.5 cups</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 478 kcal, Carbs: 12.8g, Protein: 34.0g, Fat: 33.3g, Fiber: 5.2g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Blanch 2 cups of spinach and blend into a puree. In a pan with 1 tbsp ghee, sauté onion-ginger-garlic paste. Add the spinach puree, turmeric, and garam masala. Add 150g of fish chunks and simmer until the fish is cooked through.</div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Dinner: Lamb and Cabbage Stir-Fry (Patta Gobi Gosht) <span class="meal-time">(07:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 2 cups</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 550 kcal, Carbs: 10.0g, Protein: 40.0g, Fat: 39.0g, Fiber: 5.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> In a pressure cooker or pot with 1 tbsp ghee, brown 150g lamb pieces with ginger-garlic paste. Add turmeric, salt, and a little water and cook until tender. Add 2 cups of shredded cabbage and cook until the cabbage is soft and integrated with the lamb.</div>
+                </div>
+            </div>
+
+            <div class="meal-category">
+                <h3>Snacks</h3>
+                <div class="meal">
+                    <div class="meal-name">Macadamia Nuts <span class="meal-time">(04:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 28g (about 10-12 nuts)</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 195 kcal, Carbs: 4.0g, Protein: 2.2g, Fat: 21.0g, Fiber: 2.4g</div>
+                    <div class="recipe"><strong>Recipe:</strong> A handful of raw or dry-roasted macadamia nuts.</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="day-plan">
+            <div class="day-header">Day 4</div>
+            <div class="daily-totals">
+                <strong>Daily Totals:</strong> Calories: 1597 kcal | Carbohydrates: 38.9g | Protein: 101.9g | Fat: 117.1g | Fiber: 14.9g
+            </div>
+
+            <div class="meal-category">
+                <h3>Pre-Meal Appetizers</h3>
+                <div class="meal">
+                    <div class="meal-name">Pre-Lunch Lettuce and Tomato Salad <span class="meal-time">(12:45 PM)</span></div>
+                    <div><strong>Portion:</strong> 1 bowl</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 20 kcal, Carbs: 3.2g, Protein: 1.0g, Fat: 0.3g, Fiber: 1.4g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Combine 1 cup of chopped lettuce and 1/4 sliced tomato. Season with salt and pepper.</div>
+                </div>
+            </div>
+
+            <div class="meal-category">
+                <h3>Main Meals</h3>
+                <div class="meal">
+                    <div class="meal-name">Breakfast: Spicy Egg Bhurji <span class="meal-time">(08:00 AM)</span></div>
+                    <div><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 285 kcal, Carbs: 4.5g, Protein: 13.5g, Fat: 24.0g, Fiber: 1.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Heat 1 tbsp ghee. Sauté 1/4 chopped onion, 1/2 chopped tomato, and green chili (optional). Add turmeric and salt. Pour in 2 whisked eggs and scramble to desired consistency.</div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Lunch: Lamb Saag (with Kale) <span class="meal-time">(01:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 1.5 cups</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 560 kcal, Carbs: 10.2g, Protein: 42.0g, Fat: 40.0g, Fiber: 4.5g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Cook 150g lamb pieces until tender. Separately, blanch 2 cups of chopped kale and blend into a coarse paste. In a pan with 1 tbsp ghee, sauté ginger-garlic paste, add the kale puree and spices (coriander, cumin). Add the cooked lamb and simmer for 10 minutes.</div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Dinner: Pan-Seared Fish with Mushroom Masala <span class="meal-time">(07:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 1 fillet and 1 cup masala</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 512 kcal, Carbs: 15.0g, Protein: 35.0g, Fat: 35.8g, Fiber: 5.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Pan-sear a 150g fish fillet and set aside. In the same pan with 1 tbsp ghee, sauté 1/2 chopped onion. Add 1.5 cups sliced mushrooms and cook until browned. Add 1/2 chopped tomato, ginger-garlic paste, and spices. Cook into a thick masala. Serve the fish topped with the mushroom masala.</div>
+                </div>
+            </div>
+
+            <div class="meal-category">
+                <h3>Snacks</h3>
+                <div class="meal">
+                    <div class="meal-name">Walnuts <span class="meal-time">(04:30 PM)</span></div>
+                    <div><strong>Portion:</strong> 30g (about 14 halves)</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 220 kcal, Carbs: 6.0g, Protein: 4.4g, Fat: 20.0g, Fiber: 3.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> A handful of raw walnuts.</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="day-plan">
+            <div class="day-header">Day 5</div>
+            <div class="daily-totals">
+                <strong>Daily Totals:</strong> Calories: 1564 kcal | Carbohydrates: 48.9g | Protein: 96.5g | Fat: 113.6g | Fiber: 19.9g
+            </div>
+
+            <div class="meal-category">
+                <h3>Pre-Meal Appetizers</h3>
+                <div class="meal">
+                    <div class="meal-name">Pre-Dinner Mixed Greens Salad <span class="meal-time">(06:45 PM)</span></div>
+                    <div><strong>Portion:</strong> 1 bowl</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 35 kcal, Carbs: 2.0g, Protein: 1.0g, Fat: 2.5g, Fiber: 1.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Toss 1 cup of mixed greens (lettuce, arugula) with 5g of pine nuts and a squeeze of lemon.</div>
+                </div>
+            </div>
+
+            <div class="meal-category">
+                <h3>Main Meals</h3>
+                <div class="meal">
+                    <div class="meal-name">Breakfast: Eggplant Omelette (Baingan Omelette) <span class="meal-time">(08:30 AM)</span></div>
+                    <div><strong>Portion:</strong> 1 omelette</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 310 kcal, Carbs: 10.0g, Protein: 14.0g, Fat: 25.0g, Fiber: 4.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Finely chop 1/2 cup of eggplant. Sauté in 1 tbsp ghee with onion and garlic until very soft. Mash it slightly in the pan. Pour over 2 whisked eggs seasoned with salt and spices. Cook until set.</div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Lunch: Fish Fry with Sautéed Swiss Chard <span class="meal-time">(01:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 1 fillet and 1 cup chard</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 450 kcal, Carbs: 8.9g, Protein: 33.0g, Fat: 31.0g, Fiber: 3.9g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Coat a 150g fish fillet in a paste of ginger-garlic, turmeric, and chili powder. Pan-fry in 1 tbsp ghee until crisp and cooked. In a separate pan, sauté 2 cups of chopped Swiss chard with garlic and salt until wilted.</div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Dinner: Lamb and Broccoli Stir-fry <span class="meal-time">(07:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 2 cups</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 520 kcal, Carbs: 12.0g, Protein: 40.0g, Fat: 35.0g, Fiber: 5.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Slice 150g of lamb thinly. Stir-fry in 1 tbsp ghee with ginger, garlic, and soy sauce (or tamari). Once cooked, add 1.5 cups of broccoli florets and stir-fry for another 3-4 minutes until broccoli is tender-crisp.</div>
+                </div>
+            </div>
+
+            <div class="meal-category">
+                <h3>Snacks</h3>
+                <div class="meal">
+                    <div class="meal-name">Almonds and Strawberries <span class="meal-time">(04:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 249 kcal, Carbs: 16.0g, Protein: 8.5g, Fat: 19.1g, Fiber: 6.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> A mix of 20g almonds and 1/2 cup of sliced strawberries.</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="day-plan">
+            <div class="day-header">Day 6</div>
+            <div class="daily-totals">
+                <strong>Daily Totals:</strong> Calories: 1611 kcal | Carbohydrates: 42.1g | Protein: 105.1g | Fat: 118.0g | Fiber: 14.2g
+            </div>
+
+            <div class="meal-category">
+                <h3>Pre-Meal Appetizers</h3>
+                <div class="meal">
+                    <div class="meal-name">Pre-Lunch Simple Arugula Salad <span class="meal-time">(12:45 PM)</span></div>
+                    <div><strong>Portion:</strong> 1 bowl</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 15 kcal, Carbs: 1.5g, Protein: 1.0g, Fat: 0.5g, Fiber: 0.8g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Toss 1.5 cups of arugula with salt, pepper, and lemon juice.</div>
+                </div>
+            </div>
+
+            <div class="meal-category">
+                <h3>Main Meals</h3>
+                <div class="meal">
+                    <div class="meal-name">Breakfast: Boiled Egg Masala Fry with Cabbage <span class="meal-time">(08:00 AM)</span></div>
+                    <div><strong>Portion:</strong> 2 eggs and 1 cup cabbage</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 310 kcal, Carbs: 9.0g, Protein: 14.0g, Fat: 25.0g, Fiber: 3.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Hard boil 2 eggs, peel and halve them. Heat 1 tbsp ghee, sauté 1/4 chopped onion, ginger, garlic. Add 1 cup shredded cabbage and cook until soft. Add turmeric, salt, and chili powder. Gently toss the boiled eggs in the masala.</div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Lunch: Keema Palak (Minced Lamb with Spinach) <span class="meal-time">(01:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 1.5 cups</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 556 kcal, Carbs: 11.6g, Protein: 42.1g, Fat: 39.5g, Fiber: 5.4g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Heat 1 tbsp ghee, sauté onion, ginger-garlic paste. Add 150g minced lamb and brown it. Add spices (turmeric, coriander, cumin). Stir in 2 cups of chopped spinach and cook until wilted and well combined with the keema.</div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Dinner: Simple Fish Curry <span class="meal-time">(07:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 1.5 cups</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 510 kcal, Carbs: 15.0g, Protein: 38.0g, Fat: 34.0g, Fiber: 4.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> In a pan with 1 tbsp ghee, sauté 1/2 chopped onion, ginger-garlic paste. Add 1.5 chopped tomatoes and cook into a paste. Add spices (turmeric, chili powder, garam masala) and 1 cup of water. Simmer for 5 minutes. Gently place 150g of fish chunks into the curry and cook for 7-10 minutes until done.</div>
+                </div>
+            </div>
+
+            <div class="meal-category">
+                <h3>Snacks</h3>
+                <div class="meal">
+                    <div class="meal-name">Pecans <span class="meal-time">(04:00 PM)</span></div>
+                    <div><strong>Portion:</strong> 30g</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 220 kcal, Carbs: 5.0g, Protein: 3.0g, Fat: 22.0g, Fiber: 3.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> A handful of raw pecans.</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="day-plan">
+            <div class="day-header">Day 7</div>
+            <div class="daily-totals">
+                <strong>Daily Totals:</strong> Calories: 1599 kcal | Carbohydrates: 43.3g | Protein: 100.8g | Fat: 118.3g | Fiber: 17.9g
+            </div>
+
+            <div class="meal-category">
+                <h3>Pre-Meal Appetizers</h3>
+                <div class="meal">
+                    <div class="meal-name">Pre-Dinner Tomato and Onion Salad <span class="meal-time">(06:45 PM)</span></div>
+                    <div><strong>Portion:</strong> 1 small bowl</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 30 kcal, Carbs: 6.0g, Protein: 0.8g, Fat: 0.2g, Fiber: 1.5g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Combine 1/2 chopped tomato and 1/4 sliced onion. Season with salt, pepper, and a squeeze of lemon juice.</div>
+                </div>
+            </div>
+
+            <div class="meal-category">
+                <h3>Main Meals</h3>
+                <div class="meal">
+                    <div class="meal-name">Breakfast: Mushroom and Spinach Scrambled Eggs <span class="meal-time">(09:00 AM)</span></div>
+                    <div><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 310 kcal, Carbs: 5.3g, Protein: 15.0g, Fat: 26.0g, Fiber: 1.9g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Heat 1 tbsp ghee. Sauté 1/2 cup sliced mushrooms until golden. Add 1 cup of spinach and cook until wilted. Pour in 2 whisked eggs, season with salt and pepper, and scramble.</div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Lunch: Fish Tikka with Cauliflower Salad <span class="meal-time">(01:30 PM)</span></div>
+                    <div><strong>Portion:</strong> 1 serving</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 485 kcal, Carbs: 12.0g, Protein: 39.0g, Fat: 32.0g, Fiber: 5.5g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Marinate 150g fish chunks in a paste of ginger, garlic, tomato, and spices. Skewer and bake/pan-fry until cooked. For the salad, mix 1 cup of finely chopped raw cauliflower with chopped onion, tomato, and a lemon-ghee dressing.</div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Dinner: Lamb and Kale Curry <span class="meal-time">(07:30 PM)</span></div>
+                    <div><strong>Portion:</strong> 1.5 cups</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 554 kcal, Carbs: 15.0g, Protein: 41.0g, Fat: 39.1g, Fiber: 6.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> Cook 150g lamb pieces in a pressure cooker with ginger-garlic paste and spices until tender. In a pan, heat 1 tbsp ghee, sauté 1/2 chopped onion and 1 chopped tomato. Add 2 cups of chopped kale and cook until soft. Add the cooked lamb and simmer together for 10 minutes.</div>
+                </div>
+            </div>
+
+            <div class="meal-category">
+                <h3>Snacks</h3>
+                <div class="meal">
+                    <div class="meal-name">Mixed Nut Medley <span class="meal-time">(04:30 PM)</span></div>
+                    <div><strong>Portion:</strong> 30g</div>
+                    <div class="nutrition-info"><strong>Nutrition:</strong> 220 kcal, Carbs: 5.0g, Protein: 5.0g, Fat: 21.0g, Fiber: 3.0g</div>
+                    <div class="recipe"><strong>Recipe:</strong> A 30g mix of almonds, walnuts, and pecans.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

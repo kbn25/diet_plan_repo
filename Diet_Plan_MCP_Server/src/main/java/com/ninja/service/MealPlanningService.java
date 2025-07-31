@@ -1,11 +1,14 @@
 package com.ninja.service;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.ai.tool.annotation.Tool;
+import org.springframework.ai.chat.model.ToolContext;
 import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -16,7 +19,10 @@ import org.springframework.stereotype.Service;
 
 import com.ninja.entity.Food;
 import com.ninja.entity.Nutrient;
+import com.ninja.entity.LchfFood;
 import com.ninja.repository.FoodRepository;
+import com.ninja.repository.LchfFoodRepository;
+import com.ninja.repository.LfvFoodRepository;
 import com.ninja.repository.NutrientRepository;
 
 
@@ -30,11 +36,15 @@ public class MealPlanningService {
 
 	private final FoodRepository foodRepository;
 	private final NutrientRepository nutrientRepository;
+	private final LchfFoodRepository lchfRepository;
+	private final LfvFoodRepository lfvRepository;
 
 	@Autowired
-	public MealPlanningService(FoodRepository foodRepository, NutrientRepository nutrientRepository) {
+	public MealPlanningService(FoodRepository foodRepository, NutrientRepository nutrientRepository, LchfFoodRepository lchfRepository ,LfvFoodRepository lfvRepository) {
 		this.foodRepository = foodRepository;
 		this.nutrientRepository = nutrientRepository;
+		this.lchfRepository=lchfRepository;
+		this.lfvRepository=lfvRepository;
 	}
 
 	@Tool(description = "Check the server health")
@@ -249,6 +259,11 @@ public class MealPlanningService {
 	public List<Food> findFoodsWithoutAllergens() {
 		return foodRepository.findFoodsWithoutAllergens();
 	}
+	
+//	@Tool(name = "findFoodsExcludingAllergens", description = "Find foods excluding allergen flags (safer for people with allergies)")
+//	public List<Food> findFoodsExcludingAllergens(String allergen) {
+//		return foodRepository.findFoodsExcludingAllergens(allergen);
+//	}
 
 	/**
 	 * MCP Tool: Get foods with allergens Find foods that contain allergen
@@ -296,4 +311,6 @@ public class MealPlanningService {
 	public Object[] getNutritionalStatistics() {
 		return nutrientRepository.getNutritionalStatistics();
 	}
+
+	
 }

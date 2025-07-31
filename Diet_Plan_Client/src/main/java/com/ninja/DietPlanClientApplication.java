@@ -14,7 +14,7 @@ public class DietPlanClientApplication {
 //	@Bean
 //	public ToolCallbackProvider mealPlanTools(ChatServiceImpl chatServiceImpl) {
 //		return MethodToolCallbackProvider.builder().toolObjects(chatServiceImpl).build();
-//	}de
+//	}
 
 	
 	 

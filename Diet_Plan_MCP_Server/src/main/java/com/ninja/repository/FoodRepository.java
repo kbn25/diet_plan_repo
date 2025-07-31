@@ -94,4 +94,6 @@ public interface FoodRepository extends JpaRepository<Food, Long> {
      */
     @Query("SELECT f FROM Food f WHERE f.allergenFlags IS NULL OR f.allergenFlags = '' OR f.allergenFlags = 'NaN'")
     List<Food> findFoodsWithoutAllergens();
+
+  
 }

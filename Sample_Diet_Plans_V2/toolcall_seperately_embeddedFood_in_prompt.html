@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Day LCHF Indian-Style Meal Plan</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        .header-section {
+            background-color: #f1f3f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 5px solid #007bff;
+        }
+        .header-section h2 {
+            margin-top: 0;
+            color: #0056b3;
+        }
+        .header-section p {
+            margin-bottom: 5px;
+        }
+        .header-section .notes {
+            font-style: italic;
+            color: #555;
+            margin-top: 15px;
+        }
+        .day-plan {
+            border: 1px solid #dee2e6;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            page-break-inside: avoid;
+        }
+        .day-header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.9em;
+            font-weight: bold;
+            margin: -20px -20px 20px -20px;
+            border-radius: 10px 10px 0 0;
+        }
+        .daily-totals {
+            background-color: #e9ecef;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            font-size: 1.1em;
+            text-align: center;
+        }
+        .daily-totals strong {
+            color: #0056b3;
+        }
+        .meal-category h3 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 8px;
+            margin-top: 25px;
+            color: #0056b3;
+            font-size: 1.5em;
+        }
+        .meal {
+            background: #fdfdfd;
+            border: 1px solid #e9ecef;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: box-shadow 0.3s ease;
+        }
+        .meal:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+        }
+        .meal-name {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #343a40;
+        }
+        .meal-time {
+            font-size: 0.9em;
+            color: #6c757d;
+            font-weight: normal;
+        }
+        .meal-details {
+            margin-top: 10px;
+        }
+        .meal-details div {
+            margin-bottom: 8px;
+        }
+        .nutrition-info {
+            font-size: 0.95em;
+            color: #495057;
+            background-color: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .recipe {
+            margin-top: 12px;
+            color: #343a40;
+        }
+        strong {
+            color: #495057;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>7-Day LCHF Indian-Style Meal Plan</h1>
+
+        <div class="header-section">
+            <h2>Plan Details</h2>
+            <p><strong>Target Audience:</strong> 40-year-old person with Type 2 Diabetes (BMI: 20.0)</p>
+            <p><strong>Diet Type:</strong> LCHF (Low-Carb, High-Fat), Pescetarian</p>
+            <p><strong>Cuisine:</strong> Indian-Style</p>
+            <p><strong>Daily Target:</strong> ~1600-1800 kcal, < 40g Net Carbs</p>
+        </div>
+
+        <div class="header-section">
+            <h2>Food List & Restrictions</h2>
+            <p><strong>Allowed Foods:</strong> Artichoke, Arugula, Broccoli, Cabbage, Cauliflower, Chard, Eggplant, Eggs, Fish, Garlic, Ginger, Kale, Lettuce, Mushrooms, Onion, Sesame seeds, Spinach, Strawberry, Tomatoes</p>
+            <p><strong>Allergies:</strong> Gluten, Nuts, Dairy</p>
+            <p><strong>Other Restrictions:</strong> No Meat/Poultry</p>
+            <p class="notes"><strong>Note:</strong> This meal plan is designed for blood sugar management and weight maintenance. Flavor is built using garlic, ginger, onions, and tomatoes. It is assumed that sesame oil is used for cooking and basic seasonings like salt and pepper are permitted. All nutritional values are estimates. Drink plenty of water throughout the day.</p>
+        </div>
+
+        
+        <div class="day-plan">
+            <div class="day-header">Day 1</div>
+            <div class="daily-totals">
+                <strong>Daily Totals:</strong> 1685 kcal | Carbs: 48g | Protein: 92g | Fat: 129g | Fiber: 15g
+            </div>
+        
+            <div class="meal-category">
+                <h4>Pre-Meal Appetizer</h4>
+                <div class="meal">
+                    <div class="meal-name">Simple Arugula Salad <span class="meal-time">(12:50 PM)</span></div>
+                    <div class="meal-details">
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 75 kcal, Carbs: 2g, Protein: 1g, Fat: 7g, Fiber: 1g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Toss 1 cup of arugula with 2 tsp of sesame oil and a pinch of salt.</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="meal-category">
+                <h3>Main Meals</h3>
+                <div class="meal">
+                    <div class="meal-name">Breakfast: Masala Omelette <span class="meal-time">(8:00 AM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Eggs</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 321 kcal, Carbs: 6g, Protein: 15g, Fat: 27g, Fiber: 2g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Whisk 2 large eggs. Sauté 1 tbsp chopped onion, 1/2 tsp each of minced garlic and ginger in 1 tbsp sesame oil. Add 1/4 chopped tomato and 1/2 cup chopped spinach and cook until wilted. Pour in the eggs, season with salt, and cook until set.</div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Lunch: Pan-Seared Fish with Steamed Broccoli <span class="meal-time">(1:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Fish</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 529 kcal, Carbs: 8g, Protein: 46g, Fat: 35g, Fiber: 4g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Season a 170g (6 oz) fatty fish fillet (like salmon) with salt, minced garlic, and ginger. Pan-sear in 1 tbsp sesame oil for 4-5 minutes per side. Serve with 1.5 cups of steamed broccoli florets.</div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Dinner: Baingan Bharta (Smoky Eggplant Mash) <span class="meal-time">(7:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Eggplant</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 660 kcal, Carbs: 27g, Protein: 28g, Fat: 55g, Fiber: 7g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Roast 1 medium eggplant (400g) over a flame or in the oven until skin is charred and flesh is soft. Cool, peel, and mash. In a pan, heat 2 tbsp sesame oil, sauté 1/2 chopped onion, 1 tsp each of minced garlic and ginger. Add 1 chopped tomato and cook until soft. Add the mashed eggplant, salt, and cook for 5-7 minutes. Serve with 2 scrambled eggs (cooked in 1 tbsp of sesame oil) on the side for protein.</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="meal-category">
+                <h4>Snack</h4>
+                <div class="meal">
+                    <div class="meal-name">Strawberries with Sesame Seeds <span class="meal-time">(4:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 100 kcal, Carbs: 9g, Protein: 2g, Fat: 7g, Fiber: 1g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Slice 1/2 cup of strawberries and top with 1 tbsp of toasted sesame seeds.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="day-plan">
+            <div class="day-header">Day 2</div>
+            <div class="daily-totals">
+                <strong>Daily Totals:</strong> 1653 kcal | Carbs: 49g | Protein: 85g | Fat: 127g | Fiber: 19g
+            </div>
+        
+            <div class="meal-category">
+                <h4>Pre-Meal Appetizer</h4>
+                <div class="meal">
+                    <div class="meal-name">Tomato-Garlic Bites <span class="meal-time">(6:50 PM)</span></div>
+                    <div class="meal-details">
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 82 kcal, Carbs: 6g, Protein: 1g, Fat: 6g, Fiber: 1g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Halve 1/2 cup of cherry tomatoes. Toss with 1 minced garlic clove, 1.5 tsp sesame oil, and salt.</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="meal-category">
+                <h3>Main Meals</h3>
+                <div class="meal">
+                    <div class="meal-name">Breakfast: Cauliflower Upma-Style Stir-fry <span class="meal-time">(8:00 AM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Cauliflower</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 425 kcal, Carbs: 18g, Protein: 28g, Fat: 29g, Fiber: 8g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Grate 2 cups of cauliflower. Heat 1 tbsp sesame oil, sauté 1/4 chopped onion, 1 tsp each of minced garlic and ginger. Add the cauliflower 'rice', salt, and stir-fry for 5-7 minutes until tender. Serve topped with 2 fried eggs (cooked in 1 tbsp sesame oil).</div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Lunch: Mushroom and Spinach Sabzi <span class="meal-time">(1:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Mushrooms</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 536 kcal, Carbs: 15g, Protein: 45g, Fat: 35g, Fiber: 6g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Heat 1 tbsp sesame oil. Sauté 1/4 chopped onion and 1 tsp minced garlic. Add 2 cups of sliced mushrooms and cook until browned. Add 2 cups of spinach and 1/2 chopped tomato, cooking until spinach wilts. Season with salt. Serve with a 170g (6oz) pan-seared fish fillet (cooked in 1 tbsp sesame oil) on the side.</div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Dinner: Garlic Sautéed Chard <span class="meal-time">(7:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Chard</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 510 kcal, Carbs: 8g, Protein: 10g, Fat: 47g, Fiber: 3g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Wash and chop 4 cups of chard. In a large pan, heat 2 tbsp of sesame oil and sauté 3 cloves of minced garlic until fragrant. Add the chard and cook until wilted and tender (about 5-7 minutes). Season with salt. Serve topped with 2 tbsp of sesame seeds and 2 hard-boiled eggs on the side.</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="meal-category">
+                <h4>Snack</h4>
+                <div class="meal">
+                    <div class="meal-name">Simple Lettuce Wraps <span class="meal-time">(4:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 100 kcal, Carbs: 2g, Protein: 1g, Fat: 10g, Fiber: 1g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Take 2 large lettuce leaves. Finely chop 1/4 cup of mushrooms and mix with 2 tsp sesame oil and a pinch of salt. Use as a filling for the lettuce wraps.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="day-plan">
+            <div class="day-header">Day 3</div>
+            <div class="daily-totals">
+                <strong>Daily Totals:</strong> 1711 kcal | Carbs: 46g | Protein: 109g | Fat: 127g | Fiber: 17g
+            </div>
+        
+            <div class="meal-category">
+                <h4>Pre-Meal Appetizer</h4>
+                <div class="meal">
+                    <div class="meal-name">Spinach & Garlic Bites <span class="meal-time">(12:50 PM)</span></div>
+                    <div class="meal-details">
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 85 kcal, Carbs: 2g, Protein: 2g, Fat: 8g, Fiber: 1g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Briefly sauté 1 cup of spinach with 1 minced garlic clove in 2 tsp sesame oil until just wilted.</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="meal-category">
+                <h3>Main Meals</h3>
+                <div class="meal">
+                    <div class="meal-name">Breakfast: Scrambled Eggs with Cabbage <span class="meal-time">(8:00 AM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Cabbage</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 381 kcal, Carbs: 12g, Protein: 18g, Fat: 30g, Fiber: 5g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Heat 1 tbsp sesame oil in a pan. Sauté 1 cup of shredded cabbage with 1/4 chopped onion until tender. Whisk 2 large eggs with salt and pour over the cabbage. Scramble until cooked.</div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Lunch: Fish with Roasted Broccoli <span class="meal-time">(1:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Fish</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 595 kcal, Carbs: 11g, Protein: 48g, Fat: 41g, Fiber: 5g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Toss 2 cups of broccoli florets with 1 tbsp sesame oil and minced garlic. Roast at 200°C (400°F) for 15-20 minutes. Serve with a 170g (6 oz) fatty fish fillet (like salmon), pan-seared in 1 tbsp sesame oil.</div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Dinner: Tomato 'Rasam' Style Soup <span class="meal-time">(7:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Tomatoes</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 550 kcal, Carbs: 15g, Protein: 39g, Fat: 38g, Fiber: 5g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Sauté 1/2 chopped onion, 1 tsp each of minced garlic and ginger in 1 tbsp sesame oil. Add 2 large chopped tomatoes (300g) and 2 cups of water. Simmer for 15 minutes. Blend until smooth. Season with salt. Serve with a 170g (6oz) baked fish fillet on the side, seasoned with salt and garlic.</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="meal-category">
+                <h4>Snack</h4>
+                <div class="meal">
+                    <div class="meal-name">Sliced Strawberries <span class="meal-time">(4:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 100 kcal, Carbs: 6g, Protein: 2g, Fat: 10g, Fiber: 1g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Enjoy 1 cup of fresh sliced strawberries with 2 tsp of sesame oil drizzled on top for added fats.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="day-plan">
+            <div class="day-header">Day 4</div>
+            <div class="daily-totals">
+                <strong>Daily Totals:</strong> 1699 kcal | Carbs: 45g | Protein: 90g | Fat: 133g | Fiber: 18g
+            </div>
+        
+            <div class="meal-category">
+                <h4>Pre-Meal Appetizer</h4>
+                <div class="meal">
+                    <div class="meal-name">Mushroom Skewers <span class="meal-time">(6:50 PM)</span></div>
+                    <div class="meal-details">
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 80 kcal, Carbs: 3g, Protein: 2g, Fat: 7g, Fiber: 1g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Marinate 4-5 button mushrooms in 2 tsp sesame oil, minced garlic, and salt. Thread onto skewers and bake or pan-fry until tender.</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="meal-category">
+                <h3>Main Meals</h3>
+                <div class="meal">
+                    <div class="meal-name">Breakfast: Cheesy Egg Nests <span class="meal-time">(8:00 AM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Eggs</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 399 kcal, Carbs: 13g, Protein: 21g, Fat: 30g, Fiber: 6g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Grate 1 cup of cauliflower and mix with 1 egg and 1/4 cup of shredded low-carb cheese (if available, otherwise use 1 tbsp sesame seeds for texture). Form two 'nests' on a baking sheet. Bake for 10 mins at 200°C (400°F). Crack an egg into the center of each nest and bake for another 5-7 mins. Serve with 1/2 cup of arugula.</div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Lunch: Kale and Mushroom Stir-fry with Fish <span class="meal-time">(1:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Kale</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 610 kcal, Carbs: 14g, Protein: 47g, Fat: 43g, Fiber: 5g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Heat 1 tbsp sesame oil. Sauté 1 tsp minced garlic. Add 1 cup sliced mushrooms and cook. Add 3 cups of chopped kale and stir-fry until wilted. Season with salt. Serve with a 170g (6 oz) pan-seared fish fillet (cooked in 1 tbsp sesame oil).</div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Dinner: Stuffed Artichoke Hearts <span class="meal-time">(7:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Artichoke</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 510 kcal, Carbs: 13g, Protein: 18g, Fat: 43g, Fiber: 5g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Use 4 canned artichoke hearts in water, drained and halved. Create a stuffing by mixing 2 hard-boiled chopped eggs, 1 tbsp sesame seeds, minced garlic, and 2 tbsp sesame oil. Stuff the artichoke hearts with the mixture. Bake at 180°C (350°F) for 10 minutes.</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="meal-category">
+                <h4>Snack</h4>
+                <div class="meal">
+                    <div class="meal-name">Tomato Slices with Sesame Seeds <span class="meal-time">(4:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 100 kcal, Carbs: 2g, Protein: 2g, Fat: 10g, Fiber: 1g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Slice one medium tomato and sprinkle with salt and 1 tbsp of sesame seeds.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="day-plan">
+            <div class="day-header">Day 5</div>
+            <div class="daily-totals">
+                <strong>Daily Totals:</strong> 1678 kcal | Carbs: 47g | Protein: 104g | Fat: 124g | Fiber: 18g
+            </div>
+        
+            <div class="meal-category">
+                <h4>Pre-Meal Appetizer</h4>
+                <div class="meal">
+                    <div class="meal-name">Arugula and Tomato Salad <span class="meal-time">(12:50 PM)</span></div>
+                    <div class="meal-details">
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 80 kcal, Carbs: 4g, Protein: 1g, Fat: 7g, Fiber: 1g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Toss 1 cup of arugula and 1/4 cup of cherry tomatoes with 2 tsp sesame oil and salt.</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="meal-category">
+                <h3>Main Meals</h3>
+                <div class="meal">
+                    <div class="meal-name">Breakfast: Cauliflower Hash with Fried Egg <span class="meal-time">(8:00 AM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Cauliflower</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 398 kcal, Carbs: 13g, Protein: 15g, Fat: 32g, Fiber: 6g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Dice 1.5 cups of cauliflower florets. Sauté 1/4 chopped onion in 1 tbsp sesame oil until soft. Add cauliflower and cook until tender and slightly browned. Season with salt, garlic, and ginger. Top with one large egg fried in 1 tbsp sesame oil.</div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Lunch: Spinach with Pan-Seared Fish <span class="meal-time">(1:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Spinach</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 605 kcal, Carbs: 8g, Protein: 49g, Fat: 43g, Fiber: 5g</div>
+                        <div class="recipe"><strong>Recipe:</strong> In a pan, heat 1 tbsp sesame oil and sauté 2 cloves of minced garlic. Add 4 cups of fresh spinach and cook until wilted. Season with salt. Serve with a 170g (6 oz) fatty fish fillet, pan-seared in 1 tbsp sesame oil.</div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Dinner: Egg Curry (No-Spice Version) <span class="meal-time">(7:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Eggs</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 500 kcal, Carbs: 13g, Protein: 37g, Fat: 32g, Fiber: 5g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Hard-boil 2 eggs and peel. Make a sauce by sautéing 1/2 chopped onion, 1 tsp each of minced garlic and ginger in 1 tbsp sesame oil. Add 1.5 chopped tomatoes and cook into a paste. Add 1/2 cup water and simmer. Add the hard-boiled eggs (halved). Serve with 1/2 an avocado on the side for fat and creaminess.</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="meal-category">
+                <h4>Snack</h4>
+                <div class="meal">
+                    <div class="meal-name">Strawberries <span class="meal-time">(4:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 95 kcal, Carbs: 9g, Protein: 2g, Fat: 10g, Fiber: 1g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Enjoy 1 cup of fresh sliced strawberries.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="day-plan">
+            <div class="day-header">Day 6</div>
+            <div class="daily-totals">
+                <strong>Daily Totals:</strong> 1645 kcal | Carbs: 50g | Protein: 86g | Fat: 127g | Fiber: 21g
+            </div>
+        
+            <div class="meal-category">
+                <h4>Pre-Meal Appetizer</h4>
+                <div class="meal">
+                    <div class="meal-name">Lettuce Cups with Chopped Tomato <span class="meal-time">(12:50 PM)</span></div>
+                    <div class="meal-details">
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 75 kcal, Carbs: 4g, Protein: 1g, Fat: 6g, Fiber: 1g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Use 2 large lettuce leaves as cups. Fill with 1/4 cup chopped tomato mixed with 1.5 tsp sesame oil and salt.</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="meal-category">
+                <h3>Main Meals</h3>
+                <div class="meal">
+                    <div class="meal-name">Breakfast: Broccoli and Egg Stir-fry <span class="meal-time">(8:00 AM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Broccoli</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 365 kcal, Carbs: 13g, Protein: 18g, Fat: 28g, Fiber: 6g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Steam 1.5 cups of broccoli florets until tender-crisp. In a wok, heat 1 tbsp sesame oil. Add the broccoli and stir-fry with minced garlic and ginger. Push to one side, add 1 tbsp sesame oil and scramble 2 large eggs. Mix everything together.</div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Lunch: Eggplant and Mushroom Sabzi with Fish <span class="meal-time">(1:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Eggplant</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 615 kcal, Carbs: 20g, Protein: 45g, Fat: 43g, Fiber: 9g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Chop 1 small eggplant (200g) and 1 cup of mushrooms. Heat 1 tbsp sesame oil, sauté 1/4 onion, garlic, and ginger. Add eggplant and mushrooms, and cook until tender. Add 1/2 chopped tomato and salt. Serve with a 170g (6 oz) pan-seared fish fillet (cooked in 1 tbsp sesame oil).</div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Dinner: Hearty Fish and Tomato Stew <span class="meal-time">(7:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Fish</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 500 kcal, Carbs: 11g, Protein: 20g, Fat: 40g, Fiber: 4g</div>
+                        <div class="recipe"><strong>Recipe:</strong> In a pot, sauté 1/4 chopped onion and 1 tsp garlic in 1 tbsp sesame oil. Add 1.5 chopped tomatoes and 1.5 cups of water. Simmer for 10 minutes. Add 120g (4 oz) of cubed fatty fish and simmer for another 5-7 minutes until cooked through. Season with salt. Stir in 1 tbsp of sesame oil before serving for extra fat.</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="meal-category">
+                <h4>Snack</h4>
+                <div class="meal">
+                    <div class="meal-name">Sautéed Mushrooms <span class="meal-time">(4:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 90 kcal, Carbs: 2g, Protein: 2g, Fat: 10g, Fiber: 1g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Sauté 1 cup of sliced mushrooms in 2 tsp sesame oil with a pinch of garlic powder and salt until golden.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="day-plan">
+            <div class="day-header">Day 7</div>
+            <div class="daily-totals">
+                <strong>Daily Totals:</strong> 1698 kcal | Carbs: 48g | Protein: 96g | Fat: 130g | Fiber: 19g
+            </div>
+        
+            <div class="meal-category">
+                <h4>Pre-Meal Appetizer</h4>
+                <div class="meal">
+                    <div class="meal-name">Ginger-Garlic Cabbage Salad <span class="meal-time">(6:50 PM)</span></div>
+                    <div class="meal-details">
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 88 kcal, Carbs: 5g, Protein: 1g, Fat: 7g, Fiber: 2g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Finely shred 1 cup of cabbage. Make a dressing with 2 tsp sesame oil, 1/2 tsp each of minced ginger and garlic, and salt. Toss with the cabbage.</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="meal-category">
+                <h3>Main Meals</h3>
+                <div class="meal">
+                    <div class="meal-name">Breakfast: Spinach and Tomato Scrambled Eggs <span class="meal-time">(8:00 AM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Eggs</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 396 kcal, Carbs: 7g, Protein: 16g, Fat: 34g, Fiber: 2g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Heat 1 tbsp sesame oil. Sauté 1/4 chopped tomato and 1 cup of spinach until wilted. Pour in 2 whisked eggs and scramble. Top with 1 tbsp of sesame seeds.</div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Lunch: Baked Fish with Sautéed Chard <span class="meal-time">(1:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Fish</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 614 kcal, Carbs: 11g, Protein: 49g, Fat: 43g, Fiber: 5g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Bake a 170g (6 oz) fatty fish fillet seasoned with garlic and salt at 200°C (400°F) for 12-15 minutes. While it bakes, sauté 3 cups of chopped chard with 1 tsp minced garlic in 1 tbsp of sesame oil. Serve fish over the bed of chard.</div>
+                    </div>
+                </div>
+                <div class="meal">
+                    <div class="meal-name">Dinner: Cabbage and Egg Drop Soup <span class="meal-time">(7:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div><strong>Main Ingredient:</strong> Cabbage</div>
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 500 kcal, Carbs: 16g, Protein: 28g, Fat: 36g, Fiber: 9g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Bring 3 cups of water to a boil with 1 tsp each of minced ginger and garlic. Add 2 cups of shredded cabbage and cook for 5 minutes. Slowly drizzle in 2 whisked eggs while stirring to create ribbons. Turn off heat, stir in 2 tbsp sesame oil and salt.</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="meal-category">
+                <h4>Snack</h4>
+                <div class="meal">
+                    <div class="meal-name">Strawberry and Sesame Treat <span class="meal-time">(4:00 PM)</span></div>
+                    <div class="meal-details">
+                        <div class="nutrition-info"><strong>Nutrition:</strong> 100 kcal, Carbs: 9g, Protein: 2g, Fat: 10g, Fiber: 1g</div>
+                        <div class="recipe"><strong>Recipe:</strong> Mash 1/2 cup of strawberries and mix with 1 tbsp of sesame seeds.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+</body>
+</html>
