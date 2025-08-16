@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.ninja.entity.LchfFood;
+import com.ninja.projection.FoodLchfView;
 
 import java.util.List;
 
@@ -83,15 +84,35 @@ public interface LchfFoodRepository extends JpaRepository<LchfFood, Long> {
     //Compare the lchf & food table and exclude the allergic foods
    
 	  @Query(value = """
-	    	    SELECT distinct(l.name)
-	    	    FROM foods f
-	    	    JOIN lchf_tbl l ON LOWER(f.food_name) LIKE CONCAT('%', LOWER(l.name), '%')
-	    	    WHERE LOWER(l.limitation) IN ('ok', 'limited')
+	    	   SELECT f.food_name ,   	
+	  			energy_kcal , total_fat_g , protein_g , carbohydrate_g ,
+	  			fiber_g , sugars_g , added_sugars_g , sodium_mg ,
+	  			potassium_mg , calcium_mg , iron_mg , vitamin_c_mg ,
+	  			cholesterol_mg , saturated_fat_g , vitamin_d_mcg ,
+	  			magnesium_mg 
+	  			FROM lchf_foods_tbl f
+	  			join nutrients n
+	            on n.fdc_id=f.fdc_id
+                WHERE LOWER(limitation) IN ('ok', 'limited')
+                AND NOT EXISTS (
+	  		             SELECT 1
+	  		 		     FROM unnest(string_to_array('dairy,egg,soy', ',')) AS a(allergen_item)
+	  		 		 	 WHERE LOWER(allergen_flags) LIKE '%' || LOWER(TRIM(a.allergen_item)) || '%'
+	  					)
+	    	    """, nativeQuery = true) 
+	        List<FoodLchfView> findFoodsforLChfExcludingAllergens(@Param("allergens") String allergens);
+	  
+	  
+	  
+	  @Query(value = """
+	    	    SELECT distinct(food_name) from
+	    	    lfv_foods_tbl 
+	    	    WHERE LOWER(limitation) IN ('ok', 'limited')
 	    	      AND NOT EXISTS (
 	    	        SELECT 1
 	    	        FROM unnest(string_to_array(:allergens, ',')) AS a(allergen_item)
-	    	        WHERE LOWER(f.allergen_flags) LIKE CONCAT('%', LOWER(TRIM(a.allergen_item)), '%')
-	    	      	) LIMIT 30
+	    	        WHERE LOWER(allergen_flags) LIKE CONCAT('%', LOWER(TRIM(a.allergen_item)), '%')
+	    	      	) 
 	    	    """, nativeQuery = true) 
-	        List<String> findFoodsforLChfExcludingAllergens(@Param("allergens") String allergens);
+	        List<String> findFoodsforLfvExcludingAllergens(@Param("allergens") String allergens);
 }

@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import com.ninja.entity.LchfFood;
 import com.ninja.entity.LfvFood;
+import com.ninja.projection.FoodLchfView;
 import com.ninja.repository.LchfFoodRepository;
 import com.ninja.repository.LfvFoodRepository;
 
@@ -112,15 +113,25 @@ public class LfvAndLchfBasedDietService {
 	 * MCP Tool: Search both food and lchf table and exclude the allergies
 	 */
 	
+//	@Tool(description="Find Foods Suitable for LCHF Diet Excluding Allergies")
+//	public List<String> findFoodsForLCHFExcludingAllergies(@ToolParam (description="comma seperated allergies") String allergens)
+//	{
+//
+//	    // 1. Get the filtered food list
+//		System.out.println("Allergies" + allergens);
+//	    List<String> foods = lchfFoodRepository.findFoodsforLChfExcludingAllergens(allergens);
+//	    System.out.println(foods.toString());
+//	    return foods;
+//	}	
+//	
 	@Tool(description="Find Foods Suitable for LCHF Diet Excluding Allergies")
-	public List<String>  findFoodsForLCHFExcludingAllergies(@ToolParam (description="comma seperated allergies") String allergens)
+	public List<FoodLchfView> findFoodsForLCHFExcludingAllergies(@ToolParam (description="comma seperated allergies") String allergens)
 	{
 
 	    // 1. Get the filtered food list
 		System.out.println("Allergies" + allergens);
-	    List<String> foods = lchfFoodRepository.findFoodsforLChfExcludingAllergens(allergens);
-	    System.out.println(foods.toString());
-	    return foods;
+	    List<FoodLchfView> lchfFoods = lchfFoodRepository.findFoodsforLChfExcludingAllergens(allergens);	  
+	    return lchfFoods;
 	}	
 	
 	/**

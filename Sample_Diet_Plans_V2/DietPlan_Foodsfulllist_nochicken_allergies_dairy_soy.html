@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Day Diabetes-Friendly Meal Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            color: #16a085;
+        }
+        h2 {
+            border-bottom: 2px solid #16a085;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .restrictions {
+            text-align: center;
+            margin: -10px 0 30px 0;
+            padding: 10px;
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+        }
+        .day-container {
+            margin-bottom: 40px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .meal-card {
+            background: #ecf0f1;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 5px solid #1abc9c;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #16a085;
+            color: white;
+        }
+        .totals-table th {
+            width: 20%;
+        }
+        .recipe, .portion-size {
+            margin-top: 15px;
+        }
+        .recipe {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>7-Day Diabetes-Friendly LCHF Indian Meal Plan</h1>
+        <div class="restrictions">
+            <p><strong>Dietary Restrictions:</strong> No Chicken, No Dairy, No Soy</p>
+        </div>
+        
+        <div id="meal-plan-container"></div>
+    </div>
+
+    <script>
+        const mealPlanData = {
+          "sevenDayMealPlan": [
+            {
+              "day": "Day 1",
+              "daily_summary": {
+                "total_calories": "Approx. 1895 kcal",
+                "macronutrients": {
+                  "carbohydrates": "29g",
+                  "protein": "120g",
+                  "fat": "145g",
+                  "fiber": "12g"
+                }
+              },
+              "pre_meal_appetizer": {
+                "name": "Simple Arugula Salad",
+                "suggested_time": "12:45 PM / 7:45 PM",
+                "recipe": "A simple salad to be consumed 15 minutes before lunch and dinner. Combine 1 cup of raw arugula with a pinch of salt. Squeeze the juice from a few grape tomatoes over the top.",
+                "portion_size": "1 cup arugula (20g), 4 grape tomatoes (40g) per serving",
+                "calories": 15,
+                "nutritional_info": {
+                  "carbohydrates": "2.5g",
+                  "protein": "1.2g",
+                  "fat": "0.2g",
+                  "fiber": "0.8g"
+                }
+              },
+              "breakfast": {
+                "name": "Indian-Style Masala Scrambled Eggs",
+                "suggested_time": "8:00 AM",
+                "recipe": "1. Finely chop the onion, garlic, and ginger. 2. In a non-stick pan, dry-saute the onion, garlic, and ginger for 2-3 minutes until fragrant. 3. Whisk the eggs with a pinch of salt. 4. Pour the eggs into the pan and scramble until cooked to your liking. 5. Garnish with fresh, chopped raw spinach.",
+                "portion_size": "3 large eggs, 1/4 medium onion (25g), 1 clove garlic (3g), 1 tsp ginger (2g), 1/2 cup spinach (15g)",
+                "calories": 255,
+                "nutritional_info": {
+                  "carbohydrates": "5g",
+                  "protein": "20g",
+                  "fat": "17g",
+                  "fiber": "1g"
+                }
+              },
+              "lunch": {
+                "name": "Beef Keema with Cauliflower Rice",
+                "suggested_time": "1:00 PM",
+                "recipe": "1. Place the ground beef (70/30) in a hot pan and cook, breaking it up with a spoon. The fat will render out, creating its own cooking medium. 2. Once browned, add finely chopped onion, garlic, and ginger. Cook for 5 minutes. 3. Add chopped tomatoes and salt, simmer for 10 minutes until a thick 'masala' forms. 4. For the 'rice', grate the raw cauliflower. 5. Gently warm the cauliflower rice in a separate dry pan for 2-3 minutes. Serve the keema over the cauliflower rice.",
+                "portion_size": "150g ground beef (70% lean), 1/2 onion (50g), 2 cloves garlic (6g), 1 inch ginger (5g), 1 medium tomato (120g), 1.5 cups riced cauliflower (160g)",
+                "calories": 615,
+                "nutritional_info": {
+                  "carbohydrates": "12g",
+                  "protein": "32g",
+                  "fat": "50g",
+                  "fiber": "5g"
+                }
+              },
+              "dinner": {
+                "name": "Pan-Seared Salmon with Steamed Broccoli",
+                "suggested_time": "8:00 PM",
+                "recipe": "1. Season the salmon fillet with salt and minced garlic. 2. Place the salmon skin-side down in a cold non-stick pan and turn the heat to medium. The fat will render out. Cook for 5-6 minutes until the skin is crispy. 3. Flip the salmon and cook for another 2-4 minutes. 4. While the salmon cooks, steam the broccoli florets for 4-5 minutes until tender-crisp. 5. Serve the salmon alongside the steamed broccoli.",
+                "portion_size": "180g Atlantic salmon fillet, 2 cloves garlic (6g), 1.5 cups broccoli florets (140g)",
+                "calories": 625,
+                "nutritional_info": {
+                  "carbohydrates": "8g",
+                  "protein": "42g",
+                  "fat": "48g",
+                  "fiber": "4g"
+                }
+              },
+              "snack": {
+                "name": "Raw Almonds",
+                "suggested_time": "4:00 PM",
+                "recipe": "A handful of raw, whole almonds.",
+                "portion_size": "1/4 cup (approx. 35g)",
+                "calories": 385,
+                "nutritional_info": {
+                  "carbohydrates": "1.5g",
+                  "protein": "25g",
+                  "fat": "30g",
+                  "fiber": "2g"
+                }
+              }
+            },
+            {
+              "day": "Day 2",
+              "daily_summary": {
+                "total_calories": "Approx. 1850 kcal",
+                "macronutrients": { "carbohydrates": "28g", "protein": "115g", "fat": "142g", "fiber": "11g" }
+              },
+              "pre_meal_appetizer": {
+                "name": "Lettuce and Tomato Salad", "suggested_time": "12:45 PM / 7:45 PM",
+                "recipe": "A simple salad to be consumed 15 minutes before lunch and dinner. Roughly chop 1 cup of green leaf lettuce and 1/2 a small tomato.",
+                "portion_size": "1 cup lettuce (36g), 1/2 tomato (60g) per serving", "calories": 15,
+                "nutritional_info": { "carbohydrates": "3g", "protein": "1g", "fat": "0.2g", "fiber": "1.2g" }
+              },
+              "breakfast": {
+                "name": "Fried Eggs with Sautéed Mushrooms", "suggested_time": "8:00 AM",
+                "recipe": "1. Slice mushrooms. In a non-stick pan, dry-saute the mushrooms until they release their water and brown. 2. Push mushrooms to one side, crack two eggs into the pan and fry to your liking. Season with salt.",
+                "portion_size": "2 large eggs, 1 cup sliced mushrooms (70g)",
+                "calories": 180, "nutritional_info": { "carbohydrates": "4g", "protein": "15g", "fat": "11g", "fiber": "1g" }
+              },
+              "lunch": {
+                "name": "Indian Goat Curry", "suggested_time": "1:00 PM",
+                "recipe": "1. Cut goat meat into 1-inch cubes. 2. In a pressure cooker or heavy-bottomed pot, brown the goat meat pieces. 3. Add chopped onion, ginger, and garlic, and saute for 5 minutes. 4. Add chopped tomatoes and salt. Add 1 cup of water. 5. Pressure cook for 20-25 minutes or simmer in the pot for 1.5-2 hours until the meat is tender. Serve hot.",
+                "portion_size": "180g raw goat meat, 1/2 onion (50g), 2 cloves garlic (6g), 1 inch ginger (5g), 1 medium tomato (120g)",
+                "calories": 530, "nutritional_info": { "carbohydrates": "10g", "protein": "42g", "fat": "36g", "fiber": "2g" }
+              },
+              "dinner": {
+                "name": "Ground Turkey and Cabbage Stir-fry", "suggested_time": "8:00 PM",
+                "recipe": "1. In a large pan, cook the ground turkey until no longer pink. Drain excess liquid if any, but leave some fat for cooking. 2. Add minced garlic and ginger and cook for 1 minute. 3. Add shredded cabbage and stir-fry for 5-7 minutes until tender. 4. Season with salt. Serve hot.",
+                "portion_size": "180g ground turkey (meat only, raw), 2 cups shredded cabbage (140g), 2 cloves garlic (6g), 1 tsp ginger (2g)",
+                "calories": 485, "nutritional_info": { "carbohydrates": "10g", "protein": "48g", "fat": "29g", "fiber": "5g" }
+              },
+              "snack": {
+                "name": "Walnuts", "suggested_time": "4:00 PM",
+                "recipe": "A handful of raw English walnut halves.",
+                "portion_size": "1/4 cup, halves (30g)", "calories": 640,
+                "nutritional_info": { "carbohydrates": "1g", "protein": "9g", "fat": "66g", "fiber": "2g" }
+              }
+            },
+            {
+              "day": "Day 3",
+              "daily_summary": { "total_calories": "Approx. 1835 kcal", "macronutrients": { "carbohydrates": "26g", "protein": "125g", "fat": "138g", "fiber": "10g" } },
+              "pre_meal_appetizer": { "name": "Pickled Eggplant Slices", "suggested_time": "12:45 PM / 7:45 PM", "recipe": "Serve a small portion of commercially available pickled eggplant 15 minutes before lunch and dinner.", "portion_size": "1/4 cup (approx. 40g) per serving", "calories": 30, "nutritional_info": { "carbohydrates": "3g", "protein": "0.5g", "fat": "2g", "fiber": "1g" } },
+              "breakfast": { "name": "Meatless Sausage Sauté", "suggested_time": "8:00 AM", "recipe": "1. Slice the meatless sausages and chop the onion. 2. Heat a non-stick pan and add the sausage slices. Cook for 3-4 minutes, they will release some oils. 3. Add the chopped onions and saute until translucent and soft. Season with a pinch of salt.", "portion_size": "2 meatless sausages (approx. 100g), 1/2 medium onion (50g)", "calories": 280, "nutritional_info": { "carbohydrates": "9g", "protein": "20g", "fat": "18g", "fiber": "4g" } },
+              "lunch": { "name": "Lamb Liver 'Bhuna'", "suggested_time": "1:00 PM", "recipe": "1. Cut lamb liver into small pieces. 2. In a pan, saute finely chopped onion, ginger, and garlic with a splash of water until soft. 3. Add the liver pieces and cook on high heat for 3-4 minutes, stirring continuously. 4. Add chopped tomato and salt. Cook for another 5-7 minutes until the liver is cooked through and the masala is thick. Do not overcook the liver.", "portion_size": "180g raw lamb liver, 1/2 onion (50g), 1 inch ginger (5g), 2 cloves garlic (6g), 1/2 tomato (60g)", "calories": 365, "nutritional_info": { "carbohydrates": "10g", "protein": "40g", "fat": "17g", "fiber": "2g" } },
+              "dinner": { "name": "Steamed Cod with Sautéed Spinach", "suggested_time": "8:00 PM", "recipe": "1. Season cod fillet with salt, minced ginger and garlic. Steam the cod for 8-10 minutes until flaky. 2. While cod is steaming, add 2 tbsp of water to a hot pan. Add more minced garlic. 3. Add the spinach and cook until just wilted. 4. Serve the steamed cod alongside the sautéed spinach.", "portion_size": "200g Atlantic cod fillet, 2 cups raw spinach (60g), 2 cloves garlic (6g), 1 tsp ginger (2g)", "calories": 240, "nutritional_info": { "carbohydrates": "4g", "protein": "45g", "fat": "3g", "fiber": "2g" } },
+              "snack": { "name": "Pecans", "suggested_time": "4:00 PM", "recipe": "A handful of raw pecan halves.", "portion_size": "1/4 cup (approx. 30g)", "calories": 920, "nutritional_info": { "carbohydrates": "0g", "protein": "20g", "fat": "98g", "fiber": "1g" } }
+            },
+            {
+              "day": "Day 4",
+              "daily_summary": { "total_calories": "Approx. 1870 kcal", "macronutrients": { "carbohydrates": "30g", "protein": "118g", "fat": "146g", "fiber": "13g" } },
+              "pre_meal_appetizer": { "name": "Raw Cauliflower and Broccoli Florets", "suggested_time": "12:45 PM / 7:45 PM", "recipe": "A small bowl of raw cauliflower and broccoli florets to be eaten 15 minutes before lunch and dinner.", "portion_size": "1/2 cup mixed florets (50g) per serving", "calories": 15, "nutritional_info": { "carbohydrates": "3g", "protein": "1g", "fat": "0.1g", "fiber": "1.2g" } },
+              "breakfast": { "name": "Egg Omelette with Spinach and Onions", "suggested_time": "8:00 AM", "recipe": "1. Finely chop onion and spinach. 2. Whisk 3 eggs with salt. Stir in the chopped vegetables. 3. Pour the mixture into a hot, non-stick pan and cook until set, flipping once.", "portion_size": "3 large eggs, 1/4 onion (25g), 1 cup raw spinach (30g)", "calories": 265, "nutritional_info": { "carbohydrates": "4g", "protein": "21g", "fat": "18g", "fiber": "1.5g" } },
+              "lunch": { "name": "Pan-seared Duck Breast with Sautéed Kale", "suggested_time": "1:00 PM", "recipe": "1. Score the skin of the duck breast. Place it skin-side down in a cold pan and heat to medium. Let the fat render for 10-15 minutes until the skin is crispy and brown. 2. Flip and cook for 3-5 minutes. Let it rest. 3. In a separate pan, use 1 tsp of the rendered duck fat to saute minced garlic. 4. Add chopped kale and cook until wilted. 5. Slice the duck breast and serve with the kale.", "portion_size": "150g raw duck breast (meat only), 2 cups chopped kale (130g), 1 clove garlic (3g)", "calories": 480, "nutritional_info": { "carbohydrates": "13g", "protein": "40g", "fat": "30g", "fiber": "5g" } },
+              "dinner": { "name": "Pork and Mushroom 'Curry'", "suggested_time": "8:00 PM", "recipe": "1. Use a fatty cut of pork, like variety meat jowl, and chop it into small pieces. 2. Render the fat from the pork in a hot pan. Once crispy, remove the pieces, leaving the fat. 3. In the rendered pork fat, saute chopped onion and garlic until soft. 4. Add sliced mushrooms and cook until browned. 5. Return the pork pieces to the pan. Add raw coconut milk, salt, and simmer for 10 minutes to combine flavors.", "portion_size": "150g pork jowl (raw), 1/2 onion (50g), 2 cloves garlic (6g), 1 cup sliced mushrooms (70g), 1/2 cup raw coconut milk (120ml)", "calories": 675, "nutritional_info": { "carbohydrates": "9g", "protein": "25g", "fat": "62g", "fiber": "2g" } },
+              "snack": { "name": "Macadamia Nuts", "suggested_time": "4:00 PM", "recipe": "A serving of raw macadamia nuts.", "portion_size": "1/4 cup (34g)", "calories": 435, "nutritional_info": { "carbohydrates": "1g", "protein": "31g", "fat": "36g", "fiber": "3g" } }
+            },
+            {
+              "day": "Day 5",
+              "daily_summary": { "total_calories": "Approx. 1845 kcal", "macronutrients": { "carbohydrates": "26g", "protein": "122g", "fat": "142g", "fiber": "10g" } },
+              "pre_meal_appetizer": { "name": "Simple Spinach Salad", "suggested_time": "12:45 PM / 7:45 PM", "recipe": "A small salad of baby spinach leaves with a pinch of salt, eaten 15 minutes before lunch and dinner.", "portion_size": "1 cup baby spinach (30g) per serving", "calories": 15, "nutritional_info": { "carbohydrates": "2g", "protein": "2g", "fat": "0.2g", "fiber": "1.5g" } },
+              "breakfast": { "name": "Fried Eggs with Arugula", "suggested_time": "8:00 AM", "recipe": "1. In a good non-stick pan, crack three eggs and cook to your preference (sunny-side up or over-easy). Season with salt. A small amount of fat may be needed; use a tiny bit of rendered fat saved from a previous meal if possible, or a splash of water to steam-fry. 2. Serve the eggs over a bed of fresh arugula.", "portion_size": "3 large eggs, 1 cup arugula (20g)", "calories": 240, "nutritional_info": { "carbohydrates": "2g", "protein": "20g", "fat": "16g", "fiber": "1g" } },
+              "lunch": { "name": "Chicken Keema Lettuce Wraps", "suggested_time": "1:00 PM", "recipe": "1. Cook ground chicken in a pan until done. 2. Add finely chopped onion, garlic, and ginger and saute. 3. Add finely chopped tomatoes and salt, cooking until a thick mixture forms. 4. Separate leaves from a head of iceberg lettuce to use as cups. 5. Spoon the chicken keema into the lettuce cups and eat.", "portion_size": "150g raw ground chicken, 1/4 onion (25g), 1 clove garlic (3g), 1/2 tsp ginger (1g), 1/2 tomato (50g), 4-5 large iceberg lettuce leaves (100g)", "calories": 360, "nutritional_info": { "carbohydrates": "8g", "protein": "38g", "fat": "19g", "fiber": "3g" } },
+              "dinner": { "name": "Crayfish 'Masala'", "suggested_time": "8:00 PM", "recipe": "1. In a pan, saute chopped onion, garlic, and ginger in 1/4 cup of coconut milk until fragrant. 2. Add chopped tomatoes and cook until soft. 3. Add the rest of the coconut milk and bring to a gentle simmer. 4. Add the raw crayfish tails and cook for 3-5 minutes until they turn pink and are cooked through. Do not overcook. 5. Season with salt.", "portion_size": "180g raw crayfish tails, 1/2 onion (50g), 2 cloves garlic (6g), 1 tsp ginger (2g), 1 medium tomato (120g), 3/4 cup coconut milk (180ml)", "calories": 490, "nutritional_info": { "carbohydrates": "12g", "protein": "35g", "fat": "32g", "fiber": "3g" } },
+              "snack": { "name": "Almonds", "suggested_time": "4:00 PM", "recipe": "A handful of raw, whole almonds.", "portion_size": "1/4 cup (approx. 35g)", "calories": 740, "nutritional_info": { "carbohydrates": "2g", "protein": "27g", "fat": "75g", "fiber": "1g" } }
+            },
+            {
+              "day": "Day 6",
+              "daily_summary": { "total_calories": "Approx. 1860 kcal", "macronutrients": { "carbohydrates": "24g", "protein": "128g", "fat": "141g", "fiber": "10g" } },
+              "pre_meal_appetizer": { "name": "Kimchi", "suggested_time": "12:45 PM / 7:45 PM", "recipe": "A small serving of kimchi, a fermented cabbage dish, to be eaten 15 minutes before lunch and dinner.", "portion_size": "1/4 cup (40g) per serving", "calories": 10, "nutritional_info": { "carbohydrates": "2g", "protein": "1g", "fat": "0.2g", "fiber": "1g" } },
+              "breakfast": { "name": "Meatless Bacon with a Fried Egg", "suggested_time": "8:00 AM", "recipe": "1. Cook the meatless bacon strips in a non-stick pan until crisp. This will release some oil. 2. Remove the bacon and fry an egg in the same pan. Season with salt.", "portion_size": "3 strips meatless bacon (approx. 45g), 1 large egg", "calories": 250, "nutritional_info": { "carbohydrates": "4g", "protein": "18g", "fat": "18g", "fiber": "2g" } },
+              "lunch": { "name": "Lamb Heart Sauté with Swiss Chard", "suggested_time": "1:00 PM", "recipe": "1. Thinly slice the lamb heart. Chop the swiss chard. 2. Heat a pan and add the lamb heart slices, cooking until browned. The heart has some natural fat. 3. Add minced garlic and cook for another minute. 4. Add the chopped swiss chard to the pan with a splash of water, cover and cook for 4-5 minutes until wilted. Season with salt.", "portion_size": "180g raw lamb heart, 2 cups chopped swiss chard (72g), 2 cloves garlic (6g)", "calories": 390, "nutritional_info": { "carbohydrates": "5g", "protein": "40g", "fat": "23g", "fiber": "2g" } },
+              "dinner": { "name": "Steamed Cod with Sautéed Spinach", "suggested_time": "8:00 PM", "recipe": "1. Season cod fillet with salt, minced ginger and garlic. Steam the cod for 8-10 minutes until flaky. 2. While cod is steaming, add 2 tbsp of water to a hot pan. Add more minced garlic. 3. Add the spinach and cook until just wilted. 4. Serve the steamed cod alongside the sautéed spinach.", "portion_size": "200g Atlantic cod fillet, 2 cups raw spinach (60g), 2 cloves garlic (6g), 1 tsp ginger (2g)", "calories": 240, "nutritional_info": { "carbohydrates": "4g", "protein": "45g", "fat": "3g", "fiber": "2g" } },
+              "snack": { "name": "Walnuts and Almonds Mix", "suggested_time": "4:00 PM", "recipe": "A mixed handful of raw walnuts and almonds.", "portion_size": "30g walnuts, 30g almonds", "calories": 970, "nutritional_info": { "carbohydrates": "9g", "protein": "24g", "fat": "97g", "fiber": "3g" } }
+            },
+            {
+              "day": "Day 7",
+              "daily_summary": { "total_calories": "Approx. 1880 kcal", "macronutrients": { "carbohydrates": "30g", "protein": "115g", "fat": "149g", "fiber": "14g" } },
+              "pre_meal_appetizer": { "name": "Tomato and Onion 'Kachumber'", "suggested_time": "12:45 PM / 7:45 PM", "recipe": "A simple Indian-style salad. Finely chop tomato and red onion. Mix together with a pinch of salt. Eat 15 minutes before lunch and dinner.", "portion_size": "1/2 medium tomato (60g), 1/8 red onion (15g) per serving", "calories": 20, "nutritional_info": { "carbohydrates": "4g", "protein": "0.5g", "fat": "0.1g", "fiber": "1g" } },
+              "breakfast": { "name": "Mushroom and Spinach Scrambled Eggs", "suggested_time": "8:00 AM", "recipe": "1. In a non-stick pan, dry-saute sliced mushrooms until they release their water and brown. 2. Add fresh spinach and cook until wilted. 3. Whisk three eggs with salt and pour into the pan. Scramble everything together until the eggs are cooked.", "portion_size": "3 large eggs, 1 cup sliced mushrooms (70g), 1 cup raw spinach (30g)", "calories": 260, "nutritional_info": { "carbohydrates": "5g", "protein": "23g", "fat": "17g", "fiber": "2g" } },
+              "lunch": { "name": "Pork Kidney 'Masala Fry'", "suggested_time": "1:00 PM", "recipe": "1. Clean and thinly slice pork kidneys. 2. In a hot pan, saute the kidney slices until browned. 3. Add finely chopped onion, ginger, and garlic and continue to fry for 5 minutes. 4. Add chopped tomato and salt. Cook until the tomato breaks down and coats the kidneys. Serve hot.", "portion_size": "180g raw pork kidneys, 1/2 onion (50g), 1 inch ginger (5g), 2 cloves garlic (6g), 1/2 tomato (60g)", "calories": 360, "nutritional_info": { "carbohydrates": "8g", "protein": "45g", "fat": "17g", "fiber": "2g" } },
+              "dinner": { "name": "Cauliflower 'Upma' with Pecans", "suggested_time": "8:00 PM", "recipe": "1. Grate a head of cauliflower to a rice-like consistency. 2. In a dry pan, toast the chopped pecans until fragrant. Set aside. 3. In the same pan, add chopped onion and garlic with a splash of water and cook until soft. 4. Add the cauliflower 'rice' to the pan and cook for 5-7 minutes, stirring frequently, until it's cooked but not mushy. 5. Stir in the toasted pecans and season with salt.", "portion_size": "2 cups riced cauliflower (215g), 1/4 onion (25g), 1 clove garlic (3g), 1/4 cup chopped pecans (30g)", "calories": 310, "nutritional_info": { "carbohydrates": "12g", "protein": "8g", "fat": "25g", "fiber": "8g" } },
+              "snack": { "name": "Macadamia Nuts", "suggested_time": "4:00 PM", "recipe": "A serving of raw macadamia nuts.", "portion_size": "1/4 cup (34g)", "calories": 930, "nutritional_info": { "carbohydrates": "1g", "protein": "38.5g", "fat": "90g", "fiber": "1g" } }
+            }
+          ]
+        };
+
+        const mealPlanContainer = document.getElementById('meal-plan-container');
+        const mealOrder = ['breakfast', 'pre_meal_appetizer', 'lunch', 'snack', 'dinner'];
+
+        mealPlanData.sevenDayMealPlan.forEach(dayData => {
+            const dayContainer = document.createElement('div');
+            dayContainer.className = 'day-container';
+            
+            let dayHtml = `<h2>${dayData.day}</h2>`;
+
+            // Daily Summary Table
+            const summary = dayData.daily_summary;
+            dayHtml += `
+                <h3>Daily Summary</h3>
+                <table class="totals-table">
+                    <tr>
+                        <th>Total Calories</th>
+                        <th>Carbohydrates</th>
+                        <th>Protein</th>
+                        <th>Fat</th>
+                        <th>Fiber</th>
+                    </tr>
+                    <tr>
+                        <td>${summary.total_calories}</td>
+                        <td>${summary.macronutrients.carbohydrates}</td>
+                        <td>${summary.macronutrients.protein}</td>
+                        <td>${summary.macronutrients.fat}</td>
+                        <td>${summary.macronutrients.fiber}</td>
+                    </tr>
+                </table>
+            `;
+            
+            // Function to create a meal card
+            const createMealCard = (meal, mealType) => {
+                if (!meal) return '';
+                const nutrients = meal.nutritional_info;
+                // Use a generic title if the meal type is not standard
+                let title = meal.name;
+                if(mealType === 'pre_meal_appetizer' && !meal.name.toLowerCase().includes('appetizer')) {
+                    title = `Pre-Meal Appetizer: ${meal.name}`;
+                }
+
+                return `
+                    <div class="meal-card">
+                        <h4>${title} (${meal.suggested_time})</h4>
+                        <table>
+                            <tr>
+                                <th>Calories</th>
+                                <th>Carbs (g)</th>
+                                <th>Protein (g)</th>
+                                <th>Fat (g)</th>
+                                <th>Fiber (g)</th>
+                            </tr>
+                            <tr>
+                                <td>${meal.calories}</td>
+                                <td>${nutrients.carbohydrates}</td>
+                                <td>${nutrients.protein}</td>
+                                <td>${nutrients.fat}</td>
+                                <td>${nutrients.fiber}</td>
+                            </tr>
+                        </table>
+                        <h3>Portion Size & Ingredients</h3>
+                        <p class="portion-size">${meal.portion_size}</p>
+                        <h3>Recipe</h3>
+                        <p class="recipe">${meal.recipe}</p>
+                    </div>
+                `;
+            };
+
+            // Add meal cards in a specific order
+            mealOrder.forEach(mealKey => {
+                if (dayData[mealKey]) {
+                    dayHtml += createMealCard(dayData[mealKey], mealKey);
+                }
+            });
+
+            dayContainer.innerHTML = dayHtml;
+            mealPlanContainer.appendChild(dayContainer);
+        });
+    </script>
+</body>
+</html>

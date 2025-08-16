@@ -19,7 +19,9 @@ import org.springframework.stereotype.Service;
 
 import com.ninja.entity.Food;
 import com.ninja.entity.Nutrient;
+import com.ninja.projection.FoodLchfView;
 import com.ninja.entity.LchfFood;
+import com.ninja.repository.FoodAndLchfRepository;
 import com.ninja.repository.FoodRepository;
 import com.ninja.repository.LchfFoodRepository;
 import com.ninja.repository.LfvFoodRepository;
@@ -38,13 +40,17 @@ public class MealPlanningService {
 	private final NutrientRepository nutrientRepository;
 	private final LchfFoodRepository lchfRepository;
 	private final LfvFoodRepository lfvRepository;
+	private final FoodAndLchfRepository foodAndLchfRepository;
 
 	@Autowired
-	public MealPlanningService(FoodRepository foodRepository, NutrientRepository nutrientRepository, LchfFoodRepository lchfRepository ,LfvFoodRepository lfvRepository) {
+	public MealPlanningService(FoodRepository foodRepository, NutrientRepository nutrientRepository, 
+			LchfFoodRepository lchfRepository ,LfvFoodRepository lfvRepository,
+			FoodAndLchfRepository foodAndLchfRepository) {
 		this.foodRepository = foodRepository;
 		this.nutrientRepository = nutrientRepository;
 		this.lchfRepository=lchfRepository;
 		this.lfvRepository=lfvRepository;
+		this.foodAndLchfRepository=foodAndLchfRepository;
 	}
 
 	@Tool(description = "Check the server health")
@@ -260,10 +266,25 @@ public class MealPlanningService {
 		return foodRepository.findFoodsWithoutAllergens();
 	}
 	
-//	@Tool(name = "findFoodsExcludingAllergens", description = "Find foods excluding allergen flags (safer for people with allergies)")
-//	public List<Food> findFoodsExcludingAllergens(String allergen) {
-//		return foodRepository.findFoodsExcludingAllergens(allergen);
-//	}
+//	@Tool(description="Find Foods Suitable for LCHF Diet Excluding Allergies")
+//	public  List<FoodLchfView> findFoodsForLCHFExcludingAllergies(@ToolParam (description="comma seperated allergies") String allergens)
+//	{
+//
+//	    // 1. Get the filtered food list
+//		System.out.println("Allergies" + allergens);
+//	    List<FoodLchfView> foodsList = foodAndLchfRepository.findAllSuitableLchfFoodsExcludingAllergies(allergens);
+//	    foodsList.forEach(f -> {
+//	        System.out.println("fdcId: " + f.getFdcId());
+//	        System.out.println("foodName: " + f.getFoodName());
+//	        System.out.println("score: " + f.getScore());
+//	        System.out.println("category: " + f.getFoodCategory());
+//	        System.out.println("energy: " + f.getEnergyKcal());
+//	        System.out.println("allergens: " + f.getAllergenFlags());
+//	        
+//	    });
+//	    return foodsList;
+//	}	
+
 
 	/**
 	 * MCP Tool: Get foods with allergens Find foods that contain allergen
